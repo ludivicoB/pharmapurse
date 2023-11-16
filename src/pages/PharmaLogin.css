@@ -1,0 +1,88 @@
+*{
+    padding: 0px;
+    margin: 0px;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+    overflow-y: hidden;
+  }
+  
+  .loginbox{
+    margin: 5%;
+    border-radius: 20px;
+    display: flex;
+    background-color: white;
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.56); 
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.56);
+  }
+  .left{
+    margin: 30px;
+  }
+  .right{
+    background-color: black;
+    border-radius: 20px;
+    background: url(/public/images/pharma.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 600px;
+ 
+  }
+  h1{
+    color: #151296;
+  }
+  h2{
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
+  span{
+    color: #151296;
+    font-weight: bolder;
+  }
+  .form{
+    margin-top: 20px;
+    text-align: center;
+  }
+  .form-input{
+    position: relative;
+  }
+  input{
+    padding-left: 10px; 
+  
+    order: 1px solid #6AB3F7;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #6AB3F7;
+  }
+  
+  .btnlogin{
+    margin-top: 30px;
+    background-color: #4B70EA;
+    color: white;
+    border: 1px solid #6AB3F7;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .btnregister{
+    background-color: #4BC4EA;
+    color: white;
+    border: 1px solid #6AB3F7;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  input, button{
+    margin: 5px;
+    width: 300px;
+    border-radius: 5px;
+  }
+  button{
+    width: 315px;
+    cursor: pointer;
+  }
+  hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }

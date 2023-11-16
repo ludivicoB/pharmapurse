@@ -1,0 +1,59 @@
+body{
+    background-color: #E7EFFF;
+}
+.container-contact{
+    margin-top: 60px;
+    background-color: #C4E3FF;
+    display: flex;
+    justify-content: center;
+}
+.container-contact > div{
+    text-align: center;
+    padding-top: 50px;
+}
+.firstp{
+    font-weight: bold;
+    font-size: 20px;
+}
+.secondp{
+    color: #040404;
+    opacity: 0.5;
+    padding-bottom: 40px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.contact-form{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #C5BFBF;
+    border-radius: 18px;
+    background-color: white;
+    padding-left: 40px;
+    width: 736px;
+}
+.contact-form > p{
+    font-weight: bold;
+}
+input{
+    border: 1px solid #3c3c4386;
+    width: 327px;
+    height: 48px;
+    border-radius: 7px;
+}
+.txtarea{
+    width: 657px;
+    height: 287px;
+}
+.btnsend{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+    background-color: #6ab3f7c4;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    width: 183px;
+    height: 48px;
+}

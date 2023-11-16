@@ -1,0 +1,51 @@
+body{
+    background-color: #E7EFFF;
+}
+.center{
+    margin-top: 26px;
+    /* width: 9000; */
+    display: flex;
+    justify-content: center;
+}
+.feature-container{
+    /* width: 1233px; */
+    margin-bottom: 50px;
+}
+.titleFeature{
+    margin-bottom: 26px;
+}
+.featureHead{
+    text-align: center;
+    background-color: #C4E3FF;
+}
+.featureHead > p {
+    margin: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 40px;
+}
+.featureCategories{
+    width: 1233px;
+    height: 397px;
+    background-color: white;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 38px;
+}
+
+.category{
+    background-color: #E4E4E4;
+    border-radius: 30px;
+    text-align: center;
+    width: 242px;
+    height: 238px;
+    padding-top: 39px;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.thermo{
+    width: 86px;
+    height: 95px;
+}
