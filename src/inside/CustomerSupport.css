@@ -2,12 +2,13 @@ body{
     background-color: #E7EFFF;
 }
 .container-contact{
-    margin-top: 60px;
+    margin-top: 30px;
     background-color: #C4E3FF;
     display: flex;
     justify-content: center;
 }
-.container-contact > div{
+.contact-header{
+    margin-top: 10px;
     text-align: center;
     padding-top: 50px;
 }
@@ -33,16 +34,17 @@ body{
     padding-left: 40px;
     width: 736px;
 }
-.contact-form > p{
+.contact-form-p{
     font-weight: bold;
 }
-input{
+.subject-input{
     border: 1px solid #3c3c4386;
     width: 327px;
     height: 48px;
     border-radius: 7px;
 }
 .txtarea{
+    display: flex;
     width: 657px;
     height: 287px;
 }

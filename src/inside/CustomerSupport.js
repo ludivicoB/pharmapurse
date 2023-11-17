@@ -22,8 +22,8 @@ export default function CustomerSupport() {
       </div>
       <div className="center">
         <div className="contact-form">
-          <p>Subject</p>
-          <input></input>
+          <p className="contact-form-p">Subject</p>
+          <input className="subject-input"></input>
 
           <p>How can I help you</p>
           <input className="txtarea"></input>

@@ -11,6 +11,7 @@ import PharmaRegister from "./pages/PharmaRegister";
 import AdminLogin from "./pages/AdminLogin";
 import AdminRegister from "./pages/AdminRegister";
 import UserHome from "./inside/UserHome";
+import CustomerSupport from "./inside/CustomerSupport";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -26,6 +27,7 @@ root.render(
         <Route path="/admin" element={<AdminLogin />}></Route>
         <Route path="/adminRegister" element={<AdminRegister />} />
         <Route path="/home" element={<UserHome />}></Route>
+        <Route path="/customerSupport" element={<CustomerSupport />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
