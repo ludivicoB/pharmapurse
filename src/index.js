@@ -10,6 +10,8 @@ import PharmaLogin from "./pages/PharmaLogin";
 import PharmaRegister from "./pages/PharmaRegister";
 import AdminLogin from "./pages/AdminLogin";
 import AdminRegister from "./pages/AdminRegister";
+import UserHome from "./inside/UserHome";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -23,6 +25,7 @@ root.render(
         <Route path="/pharmacistRegister" element={<PharmaRegister />} />
         <Route path="/admin" element={<AdminLogin />}></Route>
         <Route path="/adminRegister" element={<AdminRegister />} />
+        <Route path="/home" element={<UserHome />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -5,7 +5,7 @@
 body{
   background-color: #E7EFFF;
 }
-.navbar{
+/* .navbar{
   padding-left: 191px;
   padding-right: 191px; 
   height: 96px;
@@ -41,7 +41,7 @@ button:hover{
 }
 .navcontrol{
   display: flex;
-}
+} */
 .siteSection{
   margin-top: 60px;
   padding-left: 191px;
@@ -52,15 +52,16 @@ button:hover{
 .siteSection > .leftside{
   margin-right: auto;
 }
-.leftside > homeh1{
+.leftside > .homeh1{
   font-weight: none;
   font-size: 48px;
 }
-.leftside > homep {
+.leftside > .homep {
   font-size: 21px;
   color: #7D7987;
 }
-.leftside > button{
+.leftside > .homebtnex{
+  cursor: pointer;
   background-color: #4B70EA;
   color: white;
   font-size: 17px;

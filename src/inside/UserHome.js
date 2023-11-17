@@ -31,7 +31,7 @@ export default function UserHome() {
               <br /> affordable healthcare accessible on mobile
               <br /> and online for everyone
             </p>
-            <button>Explore Features</button>
+            <button className="homebtnex">Explore Features</button>
           </div>
           <img src="/images/homesection.png" alt="pharmapurse"></img>
         </div>
