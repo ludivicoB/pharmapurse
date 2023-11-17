@@ -21,14 +21,14 @@
     width: 600px;
  
   }
-  h1{
+  .adminlogin-h1{
     color: #151296;
   }
-  h2{
+  .adminlogin-h2{
     margin-top: 80px;
     margin-bottom: 20px;
   }
-  span{
+  .adminlogin-span{
     color: #151296;
     font-weight: bolder;
   }
@@ -36,10 +36,8 @@
     margin-top: 20px;
     text-align: center;
   }
-  .form-input{
-    position: relative;
-  }
-  input{
+ 
+  .adminlogin-input{
     padding-left: 10px; 
   
     order: 1px solid #6AB3F7;
@@ -49,29 +47,29 @@
     border: 1px solid #6AB3F7;
   }
   
-  .btnlogin{
-    margin-top: 30px;
-    background-color: #4B70EA;
-    color: white;
-    border: 1px solid #6AB3F7;
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-  .btnregister{
+  .adminlogin-btnregister{
     background-color: #4BC4EA;
     color: white;
     border: 1px solid #6AB3F7;
     padding-top: 16px;
     padding-bottom: 16px;
   }
-  input, button{
+  .adminlogin-input, .adminlogin-btnlogin, .adminlogin-btnregister{
     margin: 5px;
     width: 300px;
     border-radius: 5px;
-  }
-  button{
-    width: 315px;
     cursor: pointer;
+  }
+  .adminlogin-btnlogin, .adminlogin-btnregister{
+    width: 315px;
+  }
+  .adminlogin-btnlogin{
+    margin-top: 30px;
+    background-color: #4B70EA;
+    color: white;
+    border: 1px solid #6AB3F7;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
   hr{
     margin-top: 20px;

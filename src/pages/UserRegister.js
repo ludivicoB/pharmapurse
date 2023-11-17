@@ -7,29 +7,51 @@ export default function UserRegister() {
   }, []);
   return (
     <>
-      <div className="loginbox">
-        <div className="left">
-          <h1>Register</h1>
+      <div className="loginbox-container">
+        <div className="loginbox">
+          <div className="left">
+            <h1 className="usereg-h1">Register</h1>
 
-          <div className="form">
-            <input placeholder="name"></input>
-            <br />
-            <input placeholder="username"></input>
-            <br />
-            <input placeholder="email"></input>
-            <br />
-            <input placeholder="password"></input>
-            <br />
-            <input placeholder="confirm password"></input>
-            <br />
-            <button className="btnregister">Register</button>
-            <hr />
-            <Link to="/user">
-              <button className="btnlogin">Login</button>
-            </Link>
+            <div className="form">
+              <input
+                className="usereg-input"
+                type="text"
+                placeholder="name"
+              ></input>
+              <br />
+              <input
+                className="usereg-input"
+                type="text"
+                placeholder="username"
+              ></input>
+              <br />
+              <input
+                className="usereg-input"
+                type="text"
+                placeholder="email"
+              ></input>
+              <br />
+              <input
+                className="usereg-input"
+                type="password"
+                placeholder="password"
+              ></input>
+              <br />
+              <input
+                className="usereg-input"
+                type="password"
+                placeholder="confirm password"
+              ></input>
+              <br />
+              <button className="usereg-btnregister">Register</button>
+              <hr />
+              <Link to="/user">
+                <button className="usereg-btnlogin">Login</button>
+              </Link>
+            </div>
           </div>
+          <div className="rr">{/* <img src="" alt="pharmapurse"></img> */}</div>
         </div>
-        <div className="rr">{/* <img src="" alt="pharmapurse"></img> */}</div>
       </div>
     </>
   );

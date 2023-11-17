@@ -7,26 +7,38 @@ export default function PharmaLogin() {
   }, []);
   return (
     <>
-      <div className="loginbox">
-        <div className="left">
-          <h1>Login</h1>
+      <div className="loginbox-container">
+        <div className="loginbox">
+          <div className="left">
+            <h1 className="pharmalogin-h1">Login</h1>
 
-          <div className="form">
-            <h2>
-              Welcome <span>Pharmacist</span>
-            </h2>
-            <input placeholder="👨‍💻 username" type="text"></input>
-            <br />
-            <input placeholder="🔒 password" type="password"></input>
-            <br />
-            <button className="btnlogin">Login</button>
-            <hr />
-            <Link to="/pharmacistRegister">
-              <button className="btnregister">Register</button>
-            </Link>
+            <div className="form">
+              <h2 className="pharmalogin-h2">
+                Welcome <span className="pharmalogin-span">Pharmacist</span>
+              </h2>
+              <input
+                className="pharmalogin-input"
+                placeholder="👨‍💻 username"
+                type="text"
+              ></input>
+              <br />
+              <input
+                className="pharmalogin-input"
+                placeholder="🔒 password"
+                type="password"
+              ></input>
+              <br />
+              <button className="pharmalogin-loginbtn">Login</button>
+              <hr />
+              <Link to="/pharmacistRegister">
+                <button className="pharmalogin-registerbtn">Register</button>
+              </Link>
+            </div>
+          </div>
+          <div className="rrr">
+            {/* <img src="" alt="pharmapurse"></img> */}
           </div>
         </div>
-        <div className="rrr">{/* <img src="" alt="pharmapurse"></img> */}</div>
       </div>
     </>
   );

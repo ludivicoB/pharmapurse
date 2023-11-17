@@ -7,50 +7,52 @@ export default function PharmaRegister() {
   }, []);
   return (
     <>
-      <div className="loginbox">
-        <div className="left">
-          <h1>Register</h1>
+      <div className="loginbox-container">
+        <div className="loginbox">
+          <div className="left">
+            <h1 className="pharmaregister-h1">Register</h1>
 
-          <div className="form">
-            <input
-              className="Registerinput"
-              placeholder="name"
-              type="text"
-            ></input>
-            <br />
-            <input
-              className="Registerinput"
-              placeholder="username"
-              type="text"
-            ></input>
-            <br />
-            <input
-              className="Registerinput"
-              placeholder="email"
-              type="text"
-            ></input>
-            <br />
-            <input
-              className="Registerinput"
-              placeholder="password"
-              type="password"
-            ></input>
-            <br />
-            <input
-              className="Registerinput"
-              placeholder="confirm password"
-              type="password"
-            ></input>
-            <br />
-            <button className="btnregister">Register</button>
-            <hr />
-            {/* <Link to="/pharmacist"> */}
-            <button className="btnlogin">Login</button>
-            {/* </Link> */}
+            <div className="form">
+              <input
+                className="Registerinput"
+                placeholder="name"
+                type="text"
+              ></input>
+              <br />
+              <input
+                className="Registerinput"
+                placeholder="username"
+                type="text"
+              ></input>
+              <br />
+              <input
+                className="Registerinput"
+                placeholder="email"
+                type="text"
+              ></input>
+              <br />
+              <input
+                className="Registerinput"
+                placeholder="password"
+                type="password"
+              ></input>
+              <br />
+              <input
+                className="Registerinput"
+                placeholder="confirm password"
+                type="password"
+              ></input>
+              <br />
+              <button className="pharmaregister-btnregister">Register</button>
+              <hr />
+              <Link to="/pharmacist">
+                <button className="pharmaregister-btnlogin">Login</button>
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="right">
-          {/* <img src="" alt="pharmapurse"></img> */}
+          <div className="right">
+            {/* <img src="" alt="pharmapurse"></img> */}
+          </div>
         </div>
       </div>
     </>

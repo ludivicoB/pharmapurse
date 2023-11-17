@@ -6,33 +6,35 @@ body{
     background-color: #BADEFF;
     display: flex;
     justify-content: center;
+    padding: 20px;
 }
-h1{
+.home-h1{
+    padding-top: 30px;
     text-align: center;
 }
-.btn{
-    font-size: 25px;
-    border-radius: 10px;
-    text-align: center;
-    width: 150px;
-    margin: 30px;
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-    padding: 40px;
-    background-color: #3366ff;
-}
-.btn:hover{
-    
-    background-color: white;
-    color: black;
-}
-
-
-
-.controlButtons{
-    margin-top: 100px;
+.control-container{
+    margin-top: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    
+}
+.control-buttons{
+    width: 70%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    -webkit-box-shadow: 0px 7px 15px 2px rgba(0,0,0,0.5); 
+    box-shadow: 0px 7px 15px 2px rgba(0,0,0,0.5);
+}
+.home-btn{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    width: 300px;
+    color: white;
+    font-size: 20px;
+    background-color: #4B70EA;
+    border-color: #6AB3F7;
+    padding: 10px;
 }

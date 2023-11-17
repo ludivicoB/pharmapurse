@@ -7,16 +7,21 @@ export default function Home() {
       <div className="pageLogo">
         <img src="/images/navtitle.png" alt="pharmapurse"></img>
       </div>
-      <div className="controlButtons">
-        <Link to="/user" className="btn">
-          User
-        </Link>
-        <Link to="/pharmacist" className="btn">
-          Pharmacist
-        </Link>
-        <Link to="/admin" className="btn">
-          Admin
-        </Link>
+      <h1 className="home-h1">Choose a role</h1>
+      <div className="control-container">
+        <div className="control-buttons">
+          <Link to="/user">
+            <button className="home-btn">User</button>
+          </Link>
+
+          <Link to="/pharmacist">
+            <button className="home-btn">Pharmacist</button>
+          </Link>
+
+          <Link to="/admin">
+            <button className="home-btn">Admin</button>
+          </Link>
+        </div>
       </div>
     </>
   );

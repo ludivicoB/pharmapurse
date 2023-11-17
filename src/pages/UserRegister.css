@@ -1,7 +1,7 @@
 
   
   .loginbox{
-    margin: 4%;
+    margin: 1%;
     border-radius: 20px;
     display: flex;
     background-color: white;
@@ -19,7 +19,7 @@
     width: 800px;
 
   }
-  h1{
+  .usereg-h1{
     color: #151296;
   }
 
@@ -30,9 +30,9 @@
   .form-input{
     position: relative;
   }
-  input{
+  .usereg-input{
     padding-left: 30px; 
-  
+
     order: 1px solid #6AB3F7;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -40,7 +40,20 @@
     border: 1px solid #6AB3F7;
   }
   
-  .btnregister{
+  .usereg-btnlogin{
+    background-color: #4BC4EA;
+    color: white;
+    border: 1px solid #6AB3F7;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  
+  .usereg-input, .usereg-btnlogin, .usereg-btnregister{
+    margin: 5px;
+    width: 300px;
+    border-radius: 5px;
+  }
+  .usereg-btnregister{
     margin-top: 30px;
     background-color: #4B70EA;
     color: white;
@@ -48,19 +61,7 @@
     padding-top: 16px;
     padding-bottom: 16px;
   }
-  .btnlogin{
-    background-color: #4BC4EA;
-    color: white;
-    border: 1px solid #6AB3F7;
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-  input, button{
-    margin: 5px;
-    width: 300px;
-    border-radius: 5px;
-  }
-  button{
+  .usereg-btnlogin, .usereg-btnregister{
     width: 330px;
     cursor: pointer;
   }

@@ -1,7 +1,7 @@
 
   
   .loginbox{
-    margin: 5%;
+    margin: 1%;
     border-radius: 20px;
     display: flex;
     background-color: white;
@@ -17,9 +17,8 @@
     background-size: cover;
     background-position: center;
     width: 580px;
-    
   }
-  .Registerh1{
+  .pharmaregister-h1{
     color: #151296;
   }
 
@@ -40,15 +39,8 @@
     border: 1px solid #6AB3F7;
   }
   
-  .btnregister{
-    margin-top: 30px;
-    background-color: #4B70EA;
-    color: white;
-    border: 1px solid #6AB3F7;
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-  .btnlogin{
+  
+  .pharmaregister-btnlogin{
     background-color: #4BC4EA;
     color: white;
     border: 1px solid #6AB3F7;
@@ -60,20 +52,22 @@
     width: 300px;
     border-radius: 5px;
   }
-  .btnlogin{  
+  
+  .pharmaregister-btnlogin, .pharmaregister-btnregister{  
     margin: 5px;
-    width: 300px;
-    border-radius: 5px;
-  }
-  .btnregister{
-    margin: 5px;
-    width: 300px;
-    border-radius: 5px;
-  }
-  .btnlogin, .btnregister{
     width: 330px;
+    border-radius: 5px;
     cursor: pointer;
   }
+  .pharmaregister-btnregister{
+    margin-top: 30px;
+    background-color: #4B70EA;
+    color: white;
+    border: 1px solid #6AB3F7;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  
   hr{
     margin-top: 20px;
     margin-bottom: 20px;

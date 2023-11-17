@@ -1,7 +1,7 @@
 
   
   .loginbox{
-    margin: 5%;
+    margin: 1%;
     border-radius: 20px;
     display: flex;
     background-color: white;
@@ -21,14 +21,14 @@
     width: 600px;
  
   }
-  h1{
+  .pharmalogin-h1{
     color: #151296;
   }
-  h2{
+  .pharmalogin-h2{
     margin-top: 80px;
     margin-bottom: 20px;
   }
-  span{
+  .pharmalogin-span{
     color: #151296;
     font-weight: bolder;
   }
@@ -39,9 +39,8 @@
   .form-input{
     position: relative;
   }
-  input{
+  .pharmalogin-input{
     padding-left: 10px; 
-  
     order: 1px solid #6AB3F7;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -49,7 +48,20 @@
     border: 1px solid #6AB3F7;
   }
   
-  .btnlogin{
+
+  .pharmalogin-registerbtn{
+    background-color: #4BC4EA;
+    color: white;
+    border: 1px solid #6AB3F7;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .pharmalogin-input, .pharmalogin-loginbtn, .pharmalogin-registerbtn{
+    margin: 5px;
+    width: 300px;
+    border-radius: 5px;
+  }
+  .pharmalogin-loginbtn{
     margin-top: 30px;
     background-color: #4B70EA;
     color: white;
@@ -57,19 +69,7 @@
     padding-top: 16px;
     padding-bottom: 16px;
   }
-  .btnregister{
-    background-color: #4BC4EA;
-    color: white;
-    border: 1px solid #6AB3F7;
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-  input, button{
-    margin: 5px;
-    width: 300px;
-    border-radius: 5px;
-  }
-  button{
+  .pharmalogin-loginbtn, .pharmalogin-registerbtn{
     width: 315px;
     cursor: pointer;
   }

@@ -2,32 +2,29 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import Home from "./Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home";
 import UserLogin from "./pages/UserLogin";
-import PharmaLogin from "./pages/PharmaLogin";
-import AdminLogin from "./pages/AdminLogin";
 import UserRegister from "./pages/UserRegister";
-import AdminRegister from "./pages/AdminRegister";
+import PharmaLogin from "./pages/PharmaLogin";
 import PharmaRegister from "./pages/PharmaRegister";
-import UserHome from "./inside/UserHome";
+import AdminLogin from "./pages/AdminLogin";
+import AdminRegister from "./pages/AdminRegister";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <UserHome />
-    {/* <PharmaRegister /> */}
-    {/* <BrowserRouter>
+    {/* <UserHome /> */}
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/user" element={<UserLogin />}></Route>
-        <Route path="/admin" element={<AdminLogin />}></Route>
+        <Route path="/userRegister" element={<UserRegister />} />
         <Route path="/pharmacist" element={<PharmaLogin />}></Route>
-        <Route path="/userRegister" element={<UserRegister />}></Route>
-        <Route path="/adminRegister" element={<AdminRegister />}></Route>
-        <Route path="/pharmacistRegister" element={<PharmaRegister />}></Route>
-        <Route path="/home" element={<UserHome />}></Route>
+        <Route path="/pharmacistRegister" element={<PharmaRegister />} />
+        <Route path="/admin" element={<AdminLogin />}></Route>
+        <Route path="/adminRegister" element={<AdminRegister />} />
       </Routes>
-    </BrowserRouter> */}
+    </BrowserRouter>
   </React.StrictMode>
 );
 
