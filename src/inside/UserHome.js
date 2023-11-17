@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import NavBar from "./NavBar";
+import { Link } from "react-router-dom";
 export default function UserHome() {
   return (
     <>
@@ -49,39 +50,47 @@ export default function UserHome() {
             </p>
           </div>
           <div className="fbox-container">
-            <div className="fbox">
-              <img src="/images/prodcat.png" alt="pharmapurse"></img>
-              <h2>Product Catalog</h2>
-              <p>
-                Discover healthier living with our convenient pharmacy pre-order
-                feature and extensive product catalog for all your wellness
-                needs
-              </p>
-            </div>
-            <div className="fbox">
-              <img
-                className="cutsup"
-                src="/images/cutsup.png"
-                alt="pharmapurse"
-              ></img>
-              <h2>Customer Support</h2>
-              <p>
-                Get Instant Help: Connect with Our Customer Support Chat for
-                Quick and Friendly Assistance!
-              </p>
-            </div>
-            <div className="fbox">
-              <img
-                className="vpill"
-                src="/images/virtpill.png"
-                alt="pharmapurse"
-              ></img>
-              <h2>Virtual Pillbox</h2>
-              <p>
-                Never Miss a Dose: Manage Your Medications with Ease Using Our
-                Virtual Pillbox
-              </p>
-            </div>
+            <Link className="link-nounder">
+              <div className="fbox">
+                <img src="/images/prodcat.png" alt="pharmapurse"></img>
+                <h2 className="fbox-h2">Product Catalog</h2>
+                <p>
+                  Discover healthier living with our convenient pharmacy
+                  pre-order feature and extensive product catalog for all your
+                  wellness needs
+                </p>
+              </div>
+            </Link>
+
+            <Link to="/customerSupport" className="link-nounder">
+              <div className="fbox">
+                <img
+                  className="cutsup"
+                  src="/images/cutsup.png"
+                  alt="pharmapurse"
+                ></img>
+                <h2 className="fbox-h2">Customer Support</h2>
+                <p>
+                  Get Instant Help: Connect with Our Customer Support Chat for
+                  Quick and Friendly Assistance!
+                </p>
+              </div>
+            </Link>
+
+            <Link className="link-nounder">
+              <div className="fbox">
+                <img
+                  className="vpill"
+                  src="/images/virtpill.png"
+                  alt="pharmapurse"
+                ></img>
+                <h2 className="fbox-h2">Virtual Pillbox</h2>
+                <p>
+                  Never Miss a Dose: Manage Your Medications with Ease Using Our
+                  Virtual Pillbox
+                </p>
+              </div>
+            </Link>
           </div>
         </div>
 

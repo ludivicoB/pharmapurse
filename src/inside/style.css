@@ -79,10 +79,12 @@ button:hover{
   text-align: center;
 }
 .featurestext{
+  
   margin-left: 281px;
   margin-right: 281px;
 }
 .featurestext > h2{
+  
   padding-top: 43px;
   font-weight: none;
   font-size: 36px;
@@ -96,6 +98,10 @@ hr{
   font-size: 18px;
   color: #7D7987;
 }
+.link-nounder{
+  text-decoration: none;
+  /* color: black; */
+}
 .fbox-container{
   display: flex;
   justify-content: center;
@@ -108,10 +114,14 @@ hr{
   height: 299.64px;
   padding-bottom: 20px;
 }
+.fbox-h2{
+  color: black;
+}
 .fbox > img {
   margin-top: 31px;
 }
 .cutsup{
+  
   padding-top: 19px;
 }
 .vpill{
