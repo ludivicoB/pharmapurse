@@ -1,7 +1,11 @@
 import React from "react";
 import NavBar from "./NavBar";
 import "./CustomerSupport.css";
+import { useEffect } from "react";
 export default function CustomerSupport() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <>
       <NavBar />
