@@ -10,6 +10,11 @@ body{
 .feature-container{
     /* width: 1233px; */
     margin-bottom: 50px;
+    
+}
+.featurebox{
+    -webkit-box-shadow: 2px 5px 15px 5px rgba(0,0,0,0.47); 
+    box-shadow: 2px 5px 15px 5px rgba(0,0,0,0.47);
 }
 .titleFeature{
     margin-bottom: 26px;
@@ -18,7 +23,7 @@ body{
     text-align: center;
     background-color: #C4E3FF;
 }
-.featureHead > p {
+.productcatalog-p{
     margin: 0px;
     font-size: 20px;
     font-weight: bold;
@@ -32,6 +37,7 @@ body{
     display: flex;
     justify-content: center;
     gap: 38px;
+    
 }
 
 .category{
@@ -43,6 +49,8 @@ body{
     padding-top: 39px;
     font-size: 21px;
     font-weight: bold;
+    -webkit-box-shadow: 2px 5px 15px 5px rgba(0,0,0,0.47); 
+    box-shadow: 2px 5px 15px 5px rgba(0,0,0,0.47);
 }
 
 .thermo{

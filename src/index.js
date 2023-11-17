@@ -12,6 +12,7 @@ import AdminLogin from "./pages/AdminLogin";
 import AdminRegister from "./pages/AdminRegister";
 import UserHome from "./inside/UserHome";
 import CustomerSupport from "./inside/CustomerSupport";
+import ProductCatalog from "./inside/ProductCatalog";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -28,6 +29,7 @@ root.render(
         <Route path="/adminRegister" element={<AdminRegister />} />
         <Route path="/home" element={<UserHome />}></Route>
         <Route path="/customerSupport" element={<CustomerSupport />}></Route>
+        <Route path="/productCatalog" element={<ProductCatalog />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

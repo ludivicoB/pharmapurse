@@ -2,7 +2,11 @@ import React from "react";
 import "./style.css";
 import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 export default function UserHome() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <>
       <div className="container">
@@ -50,7 +54,7 @@ export default function UserHome() {
             </p>
           </div>
           <div className="fbox-container">
-            <Link className="link-nounder">
+            <Link to="/productCatalog" className="link-nounder">
               <div className="fbox">
                 <img src="/images/prodcat.png" alt="pharmapurse"></img>
                 <h2 className="fbox-h2">Product Catalog</h2>
