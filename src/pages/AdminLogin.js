@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "../pages/AdminLogin.css";
+import { Link } from "react-router-dom";
 export default function AdminLogin() {
   useEffect(() => {
     document.body.style.backgroundColor = "#E7EFFF";
@@ -18,14 +19,16 @@ export default function AdminLogin() {
             <br />
             <input placeholder="🔒 password" type="password"></input>
             <br />
+
             <button className="btnlogin">Login</button>
+
             <hr />
-            <button className="btnregister">Register</button>
+            <Link to="/adminRegister">
+              <button className="btnregister">Register</button>
+            </Link>
           </div>
         </div>
-        <div className="right">
-          {/* <img src="" alt="pharmapurse"></img> */}
-        </div>
+        <div className="r">{/* <img src="" alt="pharmapurse"></img> */}</div>
       </div>
     </>
   );

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "../pages/UserRegister.css";
+import { Link } from "react-router-dom";
 export default function UserRegister() {
   useEffect(() => {
     document.body.style.backgroundColor = "#E7EFFF";
@@ -23,12 +24,12 @@ export default function UserRegister() {
             <br />
             <button className="btnregister">Register</button>
             <hr />
-            <button className="btnlogin">Login</button>
+            <Link to="/user">
+              <button className="btnlogin">Login</button>
+            </Link>
           </div>
         </div>
-        <div className="right">
-          {/* <img src="" alt="pharmapurse"></img> */}
-        </div>
+        <div className="rr">{/* <img src="" alt="pharmapurse"></img> */}</div>
       </div>
     </>
   );

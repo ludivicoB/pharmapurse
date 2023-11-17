@@ -5,8 +5,8 @@ export default function UserHome() {
   return (
     <>
       <div className="container">
-        {/* <NavBar /> */}
-        <div className="navbar">
+        <NavBar />
+        {/* <div className="navbar">
           <div className="navtitle">
             <img src="/images/navtitle.png" alt="pharmapurse"></img>
           </div>
@@ -17,16 +17,16 @@ export default function UserHome() {
             <button>MyCart</button>
             <button>About Us</button>
             <img src="/images/account.png" alt="pharmapurse"></img>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
 
         <div className="siteSection">
-          <div className="left">
-            <h1>
+          <div className="leftside">
+            <h1 className="homeh1">
               Virtual Healthcare
               <br /> for you
             </h1>
-            <p>
+            <p className="homep">
               PharmaPurse offers progressive and
               <br /> affordable healthcare accessible on mobile
               <br /> and online for everyone

@@ -10,17 +10,16 @@
     -webkit-box-shadow: 2px 5px 15px 5px rgba(0,0,0,0.47); 
     box-shadow: 2px 5px 15px 5px rgba(0,0,0,0.47);
   }
-  .navbar > .navtitle{
-    
+ .navtitle{
     margin-right: auto;
     display: flex;
     align-items: center;
   }
-  .navtitle > img {
+  .navimg {
     height: 40.73px;
     width: 221px;
   }
-  .navcontrol > button {
+  .navcontrol > .homebtn {
     padding-left: 20px;
     padding-right: 20px;
     font-size: 18px;
@@ -31,14 +30,14 @@
   .navcontrol :first-child{
     font-weight: bolder;
   }
-  button:hover{
+  .homebtn:hover{
     background-color: #E7EFFF;
   }
   .navcontrol{
     display: flex;
   }
   
-  @media (max-width: 1260px) {
+  /* @media (max-width: 1260px) {
     .navbar {
       padding-left: 95px;
       padding-right: 95px;
@@ -78,4 +77,4 @@
       font-size: 18px;
     }
 
-  }
+  } */

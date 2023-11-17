@@ -1,13 +1,4 @@
-*{
-    padding: 0px;
-    margin: 0px;
-  }
-  body{
-    display: flex;
-    justify-content: center;
-    vertical-align: center;
-    overflow-y: hidden;
-  }
+
   
   .loginbox{
     margin: 5%;

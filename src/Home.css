@@ -1,0 +1,38 @@
+
+body{
+    background-color: rgb(231, 239, 255);;
+}
+.pageLogo{
+    background-color: #BADEFF;
+    display: flex;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+}
+.btn{
+    font-size: 25px;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+    margin: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    padding: 40px;
+    background-color: #3366ff;
+}
+.btn:hover{
+    
+    background-color: white;
+    color: black;
+}
+
+
+
+.controlButtons{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

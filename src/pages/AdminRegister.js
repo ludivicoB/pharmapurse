@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "../pages/AdminRegister.css";
+import { Link } from "react-router-dom";
 export default function AdminRegister() {
   useEffect(() => {
     document.body.style.backgroundColor = "#E7EFFF";
@@ -23,7 +24,9 @@ export default function AdminRegister() {
             <br />
             <button className="btnregister">Register</button>
             <hr />
-            <button className="btnlogin">Login</button>
+            <Link to="/admin">
+              <button className="btnlogin">Login</button>
+            </Link>
           </div>
         </div>
         <div className="right">

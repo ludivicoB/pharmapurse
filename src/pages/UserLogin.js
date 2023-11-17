@@ -1,17 +1,12 @@
 import React, { useEffect } from "react";
 import "../pages/UserLogin.css";
+import { Link } from "react-router-dom";
 export default function UserLogin() {
   useEffect(() => {
     document.body.style.backgroundColor = "#E7EFFF";
   }, []);
   return (
     <>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha384-ezrDR0sSd5MgGZCCat3zqUk2X7lY1ZSXjQlTtiH2zL5I6o1b3b7Azvqj7znKfPm"
-        crossorigin="anonymous"
-      ></link>
       <div className="loginbox">
         <div className="left">
           <h1>Login</h1>
@@ -26,14 +21,16 @@ export default function UserLogin() {
             <input placeholder="🔒 password"></input>
 
             <br />
-            <button className="btnlogin">Login</button>
+            <Link to="/home">
+              <button className="btnlogin">Login</button>
+            </Link>
             <hr />
-            <button className="btnregister">Register</button>
+            <Link to="/userRegister">
+              <button className="btnregister">Register</button>
+            </Link>
           </div>
         </div>
-        <div className="right">
-          {/* <img src="" alt="pharmapurse"></img> */}
-        </div>
+        <div className="rr">{/* <img src="" alt="pharmapurse"></img> */}</div>
       </div>
     </>
   );

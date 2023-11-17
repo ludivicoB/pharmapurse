@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "../pages/PharmaRegister.css";
+import { Link } from "react-router-dom";
 export default function PharmaRegister() {
   useEffect(() => {
     document.body.style.backgroundColor = "#E7EFFF";
@@ -11,19 +12,41 @@ export default function PharmaRegister() {
           <h1>Register</h1>
 
           <div className="form">
-            <input placeholder="name" type="text"></input>
+            <input
+              className="Registerinput"
+              placeholder="name"
+              type="text"
+            ></input>
             <br />
-            <input placeholder="username" type="text"></input>
+            <input
+              className="Registerinput"
+              placeholder="username"
+              type="text"
+            ></input>
             <br />
-            <input placeholder="email" type="text"></input>
+            <input
+              className="Registerinput"
+              placeholder="email"
+              type="text"
+            ></input>
             <br />
-            <input placeholder="password" type="password"></input>
+            <input
+              className="Registerinput"
+              placeholder="password"
+              type="password"
+            ></input>
             <br />
-            <input placeholder="confirm password" type="password"></input>
+            <input
+              className="Registerinput"
+              placeholder="confirm password"
+              type="password"
+            ></input>
             <br />
             <button className="btnregister">Register</button>
             <hr />
+            {/* <Link to="/pharmacist"> */}
             <button className="btnlogin">Login</button>
+            {/* </Link> */}
           </div>
         </div>
         <div className="right">

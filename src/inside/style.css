@@ -49,18 +49,18 @@ button:hover{
   display: flex;
   justify-content: flex-end;
 }
-.siteSection > .left{
+.siteSection > .leftside{
   margin-right: auto;
 }
-.left > h1{
+.leftside > homeh1{
   font-weight: none;
   font-size: 48px;
 }
-.left > p {
+.leftside > homep {
   font-size: 21px;
   color: #7D7987;
 }
-.left > button{
+.leftside > button{
   background-color: #4B70EA;
   color: white;
   font-size: 17px;
@@ -167,7 +167,7 @@ footer{
   font-size: 18px;
 }
 
-@media (max-width: 1260px) {
+/* @media (max-width: 1260px) {
   .navbar {
     padding-left: 95px;
     padding-right: 95px;
@@ -254,4 +254,4 @@ footer{
   .siteSection2 > img {
     width: 400px;
   }
-}
+} */

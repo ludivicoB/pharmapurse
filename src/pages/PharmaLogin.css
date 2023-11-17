@@ -1,13 +1,4 @@
-*{
-    padding: 0px;
-    margin: 0px;
-  }
-  body{
-    display: flex;
-    justify-content: center;
-    vertical-align: center;
-    overflow-y: hidden;
-  }
+
   
   .loginbox{
     margin: 5%;
@@ -20,7 +11,7 @@
   .left{
     margin: 30px;
   }
-  .right{
+  .rrr{
     background-color: black;
     border-radius: 20px;
     background: url(/public/images/pharma.jpg);

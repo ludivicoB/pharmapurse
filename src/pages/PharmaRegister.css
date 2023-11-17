@@ -1,13 +1,4 @@
-*{
-    padding: 0px;
-    margin: 0px;
-  }
-  body{
-    display: flex;
-    justify-content: center;
-    vertical-align: center;
-    overflow-y: hidden;
-  }
+
   
   .loginbox{
     margin: 5%;
@@ -28,7 +19,7 @@
     width: 580px;
     
   }
-  h1{
+  .Registerh1{
     color: #151296;
   }
 
@@ -39,7 +30,7 @@
   .form-input{
     position: relative;
   }
-  input{
+  .Registerinput{
     padding-left: 30px; 
   
     order: 1px solid #6AB3F7;
@@ -64,12 +55,22 @@
     padding-top: 16px;
     padding-bottom: 16px;
   }
-  input, button{
+  .Registerinput{
     margin: 5px;
     width: 300px;
     border-radius: 5px;
   }
-  button{
+  .btnlogin{  
+    margin: 5px;
+    width: 300px;
+    border-radius: 5px;
+  }
+  .btnregister{
+    margin: 5px;
+    width: 300px;
+    border-radius: 5px;
+  }
+  .btnlogin, .btnregister{
     width: 330px;
     cursor: pointer;
   }

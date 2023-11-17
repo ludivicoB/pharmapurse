@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "../pages/PharmaLogin.css";
+import { Link } from "react-router-dom";
 export default function PharmaLogin() {
   useEffect(() => {
     document.body.style.backgroundColor = "#E7EFFF";
@@ -20,12 +21,12 @@ export default function PharmaLogin() {
             <br />
             <button className="btnlogin">Login</button>
             <hr />
-            <button className="btnregister">Register</button>
+            <Link to="/pharmacistRegister">
+              <button className="btnregister">Register</button>
+            </Link>
           </div>
         </div>
-        <div className="right">
-          {/* <img src="" alt="pharmapurse"></img> */}
-        </div>
+        <div className="rrr">{/* <img src="" alt="pharmapurse"></img> */}</div>
       </div>
     </>
   );

@@ -5,15 +5,23 @@ export default function NavBar() {
     <>
       <div className="navbar">
         <div className="navtitle">
-          <img src="/images/navtitle.png" alt="pharmapurse"></img>
+          <img
+            className="navimg"
+            src="/images/navtitle.png"
+            alt="pharmapurse"
+          ></img>
         </div>
 
         <div className="navcontrol">
-          <button>Home</button>
-          <button>Notification</button>
-          <button>MyCart</button>
-          <button>About Us</button>
-          <img src="/images/account.png" alt="pharmapurse"></img>
+          <button className="homebtn">Home</button>
+          <button className="homebtn">Notification</button>
+          <button className="homebtn">MyCart</button>
+          <button className="homebtn">About Us</button>
+          <img
+            className="accimg"
+            src="/images/account.png"
+            alt="pharmapurse"
+          ></img>
         </div>
       </div>
     </>
