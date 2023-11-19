@@ -38,7 +38,12 @@ export default function UserLogin() {
               </Link>
             </div>
           </div>
-          <div className="rr">{/* <img src="" alt="pharmapurse"></img> */}</div>
+          <div className="rr">
+            <Link to="/">
+              <button className="userlogin-backbtn">Back</button>
+            </Link>
+          </div>
+
         </div>
       </div>
     </>
