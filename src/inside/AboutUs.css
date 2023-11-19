@@ -22,11 +22,13 @@
 }
 
 .devnames{
+    /* margin-top: 35px; */
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 .devnames-2{
+    /* margin-top: 20px; */
     display: flex;
     justify-content: center;
 }
