@@ -37,9 +37,9 @@ export default function AdminLogin() {
               </Link>
             </div>
           </div>
-          <div className="rr">
+          <div className="rrr">
             <Link to="/">
-              <button className="userlogin-backbtn">Back</button>
+              <button className="adminlogin-backbtn">Back</button>
             </Link>
           </div>
         </div>
