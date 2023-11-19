@@ -37,7 +37,11 @@ export default function AdminLogin() {
               </Link>
             </div>
           </div>
-          <div className="r">{/* <img src="" alt="pharmapurse"></img> */}</div>
+          <div className="rr">
+            <Link to="/">
+              <button className="userlogin-backbtn">Back</button>
+            </Link>
+          </div>
         </div>
       </div>
     </>

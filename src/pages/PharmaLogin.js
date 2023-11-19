@@ -35,8 +35,10 @@ export default function PharmaLogin() {
               </Link>
             </div>
           </div>
-          <div className="rrr">
-            {/* <img src="" alt="pharmapurse"></img> */}
+          <div className="rr">
+            <Link to="/">
+              <button className="userlogin-backbtn">Back</button>
+            </Link>
           </div>
         </div>
       </div>
