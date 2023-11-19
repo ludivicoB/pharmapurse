@@ -35,9 +35,9 @@ export default function PharmaLogin() {
               </Link>
             </div>
           </div>
-          <div className="rr">
+          <div className="r-pharma">
             <Link to="/">
-              <button className="userlogin-backbtn">Back</button>
+              <button className="pharmalogin-backbtn">Back</button>
             </Link>
           </div>
         </div>

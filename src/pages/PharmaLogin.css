@@ -11,15 +11,24 @@
   .left{
     margin: 30px;
   }
-  .rrr{
-    background-color: black;
+  .r-pharma{
     border-radius: 20px;
-    background: url(/public/images/pharma.jpg);
-    background-repeat: no-repeat;
+    background-image: url(/public/images/pharma.jpg);
     background-size: cover;
     background-position: center;
-    width: 600px;
- 
+    width: 700px;
+  
+    display: flex;
+    justify-content: flex-end;
+  }
+  .pharmalogin-backbtn{
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #4BC4EA;
+    color: white;
+    border: 1px solid #6AB3F7;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
   .pharmalogin-h1{
     color: #151296;
