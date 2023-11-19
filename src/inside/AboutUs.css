@@ -1,17 +1,15 @@
-body{
-    background-color: #E7EFFF;
-}
+
 .aboutsection{
     margin-top: 80px;
     background-color: #C4E3FF;
     text-align: center;
     padding-bottom: 20px;
 }
-.aboutsection > h1 {
+.abouth1{
     padding-top: 20px;
     font-size: 60px;
 }
-.aboutsection > p {
+.aboutp {
     font-size: 25px;
     color: #040404;
     opacity: 0.6;
@@ -21,4 +19,14 @@ body{
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 0px;
+}
+
+.devnames{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.devnames-2{
+    display: flex;
+    justify-content: center;
 }

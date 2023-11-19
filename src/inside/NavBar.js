@@ -19,7 +19,10 @@ export default function NavBar() {
           </Link>
           <button className="homebtn">Notification</button>
           <button className="homebtn">MyCart</button>
-          <button className="homebtn">About Us</button>
+
+          <Link to="/aboutUs" className="homebtn">
+            <button className="homebtn">About Us</button>
+          </Link>
           <img
             className="accimg"
             src="/images/account.png"

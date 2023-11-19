@@ -6,8 +6,8 @@ export default function AboutUs() {
     <>
       <NavBar />
       <div className="aboutsection">
-        <h1>About Us</h1>
-        <p>
+        <h1 className="abouth1">About Us</h1>
+        <p className="aboutp">
           "As developers and students from Cebu Institute of Technology <br />
           University, we proudly present PharmaPurse a comprehensive
           <br /> app designed to streamline operations, minimize errors,
@@ -19,6 +19,16 @@ export default function AboutUs() {
         </p>
         <h2 className="developer">Developers</h2>
         <img src="/images/devdesign.png"></img>
+      </div>
+      <div className="devname-container">
+        <div className="devnames">
+          <img src="/images/ludi.png"></img>
+          <img src="/images/ben.png"></img>
+          <img src="/images/john.png"></img>
+        </div>
+        <div className="devnames-2">
+          <img src="/images/jared.png"></img>
+        </div>
       </div>
     </>
   );
