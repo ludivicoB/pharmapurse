@@ -71,6 +71,7 @@
   }
   .adminlogin-btnlogin, .adminlogin-btnregister{
     width: 315px;
+    cursor: pointer;
   }
   .adminlogin-btnlogin{
     margin-top: 30px;

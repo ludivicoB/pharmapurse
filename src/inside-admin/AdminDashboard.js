@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
-import "./Navbar.css";
-import "../pages/AdminDashboard.css.css";
-import { Link } from "react-router-dom";
+import "./AdminDashboard.css";
+import "../inside-admin/AdminDashboard.css";
 export default function AdminDashboard() {
   useEffect(() => {
     document.body.style.backgroundColor = "#E7EFFF";
   }, []);
   return (
     <>
-    <div className="da"
+      <div>
+        <h1 className="header">JohnP0gi</h1>
+      </div>
     </>
-  )
+  );
 }

@@ -28,9 +28,9 @@ export default function AdminLogin() {
                 type="password"
               ></input>
               <br />
-
-              <button className="adminlogin-btnlogin">Login</button>
-
+              <Link to="/adminDashboard">
+                <button className="adminlogin-btnlogin">Login</button>
+              </Link>
               <hr />
               <Link to="/adminRegister">
                 <button className="adminlogin-btnregister">Register</button>
