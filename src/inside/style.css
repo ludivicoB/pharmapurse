@@ -83,7 +83,7 @@ button:hover{
   margin-left: 281px;
   margin-right: 281px;
 }
-.featurestext > h2{
+.fh2{
   
   padding-top: 43px;
   font-weight: none;
@@ -127,8 +127,8 @@ hr{
 .vpill{
   padding-top: 41px;
 }
-.fbox > p {
-  line-height: 2.5;
+.fp{
+  line-height: 2.0;
   padding-left: 34px;
   padding-right: 34px;
   color: #7D7987;
@@ -150,11 +150,11 @@ hr{
   margin-left: 40px;
   margin-right: auto;
 }
-.left2 > h1{
+.left2-h1{
   font-weight: none;
   font-size: 48px;
 }
-.left2 > p {
+.left2-p{
   font-size: 18px;
   color: #7D7987;
 }
