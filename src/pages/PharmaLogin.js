@@ -28,7 +28,9 @@ export default function PharmaLogin() {
                 type="password"
               ></input>
               <br />
-              <button className="pharmalogin-loginbtn">Login</button>
+              <Link to="/pharmaDashboard">
+                <button className="pharmalogin-loginbtn">Login</button>
+              </Link>
               <hr />
               <Link to="/pharmacistRegister">
                 <button className="pharmalogin-registerbtn">Register</button>
