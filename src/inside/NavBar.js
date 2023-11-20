@@ -17,7 +17,9 @@ export default function NavBar() {
           <Link to="/home" className="homebtn">
             <button className="homebtn">Home</button>
           </Link>
-          <button className="homebtn">Notification</button>
+          <Link to="/notification" className="homebtn">
+            <button className="homebtn">Notification</button>
+          </Link>
           <button className="homebtn">MyCart</button>
 
           <Link to="/aboutUs" className="homebtn">

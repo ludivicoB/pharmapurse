@@ -16,6 +16,7 @@ import ProductCatalog from "./inside/ProductCatalog";
 import AboutUs from "./inside/AboutUs";
 import AdminDashboard from "./inside-admin/AdminDashboard";
 import PharmaDashboard from "./inside-pharma/PharmaDashboard";
+import Notification from "./inside/Notification";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -33,6 +34,7 @@ root.render(
         <Route path="/aboutUs" element={<AboutUs />}></Route>
         <Route path="/customerSupport" element={<CustomerSupport />}></Route>
         <Route path="/productCatalog" element={<ProductCatalog />}></Route>
+        <Route path="/notification" element={<Notification />}></Route>
 
         <Route path="/adminDashboard" element={<AdminDashboard />}></Route>
 
