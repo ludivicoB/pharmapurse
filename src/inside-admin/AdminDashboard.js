@@ -10,25 +10,21 @@ export default function AdminDashboard() {
     <>
       <div className="aa">
         <NavBar />
-        <h1 className="header">JohnP0gi</h1>
         <div className="gap">
           <div className="pono">
-          <h1 className="admincom">
-            Admin Commands
-          </h1>
+            <h1 className="admincom">Admin Commands</h1>
           </div>
           <div className="bb">
-              <div className="fbox">
-                <img src="/images/prodcat.png" alt="pharmapurse"></img>
-                <h2 className="fbox-h2">Customer Support</h2>
-                <p className="fp">
-                Get Instant Help: Connect with Our Customer Support Chat for Quick and Friendly Assistance!
-                </p>
-              </div>
-          </div>
-            <div className="obosblue">
+            <div className="fbox">
+              <img src="/images/prodcat.png" alt="pharmapurse"></img>
+              <h2 className="fbox-h2">Customer Support</h2>
+              <p className="fp">
+                Get Instant Help: Connect with Our Customer Support Chat for
+                Quick and Friendly Assistance!
+              </p>
             </div>
-    
+          </div>
+          <div className="obosblue"></div>
         </div>
         <div className="pataas">s</div>
         <footer>
