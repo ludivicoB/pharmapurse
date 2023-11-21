@@ -1,5 +1,6 @@
 import React from "react";
 import "./ProductCard.css";
+import { Link } from "react-router-dom";
 export default function ProductCard(props) {
   return (
     <>
@@ -11,12 +12,14 @@ export default function ProductCard(props) {
           alt="prod_pic"
         ></img>
         <p className="product-card-price">₱{props.products.price}</p>
-        <img
-          className="product-card-addbtn"
-          src="/images/addcartbtn.png"
-          alt="pic"
-          title="add to cart"
-        ></img>
+        <Link>
+          <img
+            className="product-card-addbtn"
+            src="/images/addcartbtn.png"
+            alt="pic"
+            title="add to cart"
+          ></img>
+        </Link>
       </div>
     </>
   );
