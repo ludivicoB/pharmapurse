@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./AdminDashboard.css";
 import "../inside-admin/AdminDashboard.css";
-import NavBar from "../inside/NavBar";
+import AdminNavbar from "./AdminNavbar";
 export default function AdminDashboard() {
   useEffect(() => {
     document.body.style.backgroundColor = "#E7EFFF";
@@ -9,19 +9,21 @@ export default function AdminDashboard() {
   return (
     <>
       <div className="aa">
-        <NavBar />
+        <AdminNavbar />
         <div className="gap">
           <div className="pono">
             <h1 className="admincom">Admin Commands</h1>
           </div>
           <div className="bb">
             <div className="fbox">
-              <img src="/images/prodcat.png" alt="pharmapurse"></img>
+              <img src="/images/cutsup.png" alt="pharmapurse"></img>
               <h2 className="fbox-h2">Customer Support</h2>
-              <p className="fp">
-                Get Instant Help: Connect with Our Customer Support Chat for
-                Quick and Friendly Assistance!
-              </p>
+              <p className="fp">View your customer support messages</p>
+            </div>
+            <div className="fbox">
+              <img src="/images/userfbox.png" alt="pharmapurse"></img>
+              <h2 className="fbox-h2">View Users</h2>
+              <p className="fp">View your customer/users</p>
             </div>
           </div>
           <div className="obosblue"></div>
