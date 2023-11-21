@@ -13,6 +13,7 @@ import AdminRegister from "./pages/AdminRegister";
 import UserHome from "./inside/UserHome";
 import CustomerSupport from "./inside/CustomerSupport";
 import ProductCatalog from "./inside/ProductCatalog";
+import Products from "./inside/Products";
 import AboutUs from "./inside/AboutUs";
 import AdminDashboard from "./inside-admin/AdminDashboard";
 import PharmaDashboard from "./inside-pharma/PharmaDashboard";
@@ -34,6 +35,8 @@ root.render(
         <Route path="/aboutUs" element={<AboutUs />}></Route>
         <Route path="/customerSupport" element={<CustomerSupport />}></Route>
         <Route path="/productCatalog" element={<ProductCatalog />}></Route>
+        <Route path="/products" element={<Products />}></Route>
+
         <Route path="/notification" element={<Notification />}></Route>
 
         <Route path="/adminDashboard" element={<AdminDashboard />}></Route>
