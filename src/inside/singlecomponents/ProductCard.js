@@ -12,7 +12,7 @@ export default function ProductCard(props) {
           alt="prod_pic"
         ></img>
         <p className="product-card-price">₱{props.products.price}</p>
-        <Link>
+        <Link to="/productView">
           <img
             className="product-card-addbtn"
             src="/images/addcartbtn.png"

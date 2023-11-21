@@ -55,8 +55,8 @@ export default function Products() {
               ></input>
             </div>
             <div className="products-container">
-              {products.map((product) => (
-                <ProductCard products={product} />
+              {products.map((product, index) => (
+                <ProductCard key={index} products={product} />
               ))}
             </div>
           </div>

@@ -14,6 +14,7 @@ import UserHome from "./inside/UserHome";
 import CustomerSupport from "./inside/CustomerSupport";
 import ProductCatalog from "./inside/ProductCatalog";
 import Products from "./inside/Products";
+import ProductView from "./inside/ProductView";
 import AboutUs from "./inside/AboutUs";
 import AdminDashboard from "./inside-admin/AdminDashboard";
 import PharmaDashboard from "./inside-pharma/PharmaDashboard";
@@ -36,6 +37,7 @@ root.render(
         <Route path="/customerSupport" element={<CustomerSupport />}></Route>
         <Route path="/productCatalog" element={<ProductCatalog />}></Route>
         <Route path="/products" element={<Products />}></Route>
+        <Route path="/productView" element={<ProductView />}></Route>
 
         <Route path="/notification" element={<Notification />}></Route>
 
