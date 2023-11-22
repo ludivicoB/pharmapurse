@@ -2,6 +2,7 @@ import React from "react";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
 export default function ProductCard(props) {
+  console.log("props", props);
   return (
     <>
       <div className="product-card-container">
@@ -9,10 +10,10 @@ export default function ProductCard(props) {
         <img
           className="product-card-img"
           src={`/images/${props.products.image}`}
-          alt="prod_pic"
+          alt={props.products.image}
         ></img>
         <p className="product-card-price">₱{props.products.price}</p>
-        <Link to="/productView">
+        <Link to="/productView" products={props.products}>
           <img
             className="product-card-addbtn"
             src="/images/addcartbtn.png"
