@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+// <<<<<<< HEAD
 // PharmaProfile.js
 import React from "react";
 import "./PharmaNavbar.css";
@@ -43,11 +43,7 @@ export default function PharmaProfile() {
                 <br></br>
                 <br></br>
                 <label className="password">Password: </label>
-                <input
-                  className="passwor"
-                  value="pharmadoe"
-                  type="password"
-                />
+                <input className="passwor" value="pharmadoe" type="password" />
                 <br></br>
                 <br></br>
                 <button className="save" type="button">
@@ -61,10 +57,11 @@ export default function PharmaProfile() {
       </div>
     </>
   );
-=======
-import React from "react";
-import "./PharmaProfile.css";
-export default function PharmaProfile() {
-  return <div>PharmaProfile</div>;
->>>>>>> 9aa43021751ca0656ae3c3e42b87f2db27292e52
 }
+// =======
+// import React from "react";
+// import "./PharmaProfile.css";
+// export default function PharmaProfile() {
+//   return <div>PharmaProfile</div>;
+// >>>>>>> 9aa43021751ca0656ae3c3e42b87f2db27292e52
+// }
