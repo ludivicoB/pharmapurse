@@ -21,6 +21,7 @@ import AdminDashboard from "./inside-admin/AdminDashboard";
 import AdminProfile from "./inside-admin/AdminProfile";
 import UserList from "./inside-admin/UserList";
 import PharmaDashboard from "./inside-pharma/PharmaDashboard";
+import PharmaProfile from "./inside-pharma/PharmaProfile";
 import OrderManager from "./inside-pharma/OrderManager";
 import Notification from "./inside/Notification";
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -53,6 +54,7 @@ root.render(
         <Route path="/userList" element={<UserList />}></Route>
 
         <Route path="/pharmaDashboard" element={<PharmaDashboard />}></Route>
+        <Route path="/pharmaProfile" element={<PharmaProfile />}></Route>
         <Route path="/orderManager" element={<OrderManager />}></Route>
       </Routes>
     </BrowserRouter>
