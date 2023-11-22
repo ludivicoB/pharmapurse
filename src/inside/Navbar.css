@@ -37,6 +37,10 @@
   } */
   .homebtn:hover{
     background-color: #E7EFFF;
+    transition: .2s ;
+  }
+  .homebtn:not(:hover){
+    transition: .2s;
   }
   .navcontrol{
     display: flex;

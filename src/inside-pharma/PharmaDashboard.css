@@ -266,3 +266,28 @@ footer{
     width: 400px;
   }
 } */
+
+.gapa{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding-bottom: 70px;
+    background-color: #BADEFF;
+    text-align: center;
+}
+.ponoo{
+    padding-top: 40px;
+}
+.adminco{
+    padding-bottom: 30px;
+}
+.bbb{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.obossbluee{
+    padding-bottom: 10px;
+}
+.pataass{
+    padding-top: 100px;
+}

@@ -13,9 +13,16 @@ import AdminRegister from "./pages/AdminRegister";
 import UserHome from "./inside/UserHome";
 import CustomerSupport from "./inside/CustomerSupport";
 import ProductCatalog from "./inside/ProductCatalog";
+import Products from "./inside/Products";
+import ProductView from "./inside/ProductView";
 import AboutUs from "./inside/AboutUs";
+import MyCart from "./inside/MyCart";
 import AdminDashboard from "./inside-admin/AdminDashboard";
+import AdminProfile from "./inside-admin/AdminProfile";
+import UserList from "./inside-admin/UserList";
 import PharmaDashboard from "./inside-pharma/PharmaDashboard";
+import OrderManager from "./inside-pharma/OrderManager";
+import Notification from "./inside/Notification";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -34,9 +41,19 @@ root.render(
         <Route path="/customerSupport" element={<CustomerSupport />}></Route>
         <Route path="/productCatalog" element={<ProductCatalog />}></Route>
 
+        <Route path="/products" element={<Products />}></Route>
+        <Route path="/productView" element={<ProductView />}></Route>
+
+        <Route path="/notification" element={<Notification />}></Route>
+
+        <Route path="/myCart" element={<MyCart />}></Route>
+
         <Route path="/adminDashboard" element={<AdminDashboard />}></Route>
+        <Route path="/adminProfile" element={<AdminProfile />}></Route>
+        <Route path="/userList" element={<UserList />}></Route>
 
         <Route path="/pharmaDashboard" element={<PharmaDashboard />}></Route>
+        <Route path="/orderManager" element={<OrderManager />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

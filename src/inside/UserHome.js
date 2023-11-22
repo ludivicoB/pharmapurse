@@ -43,9 +43,9 @@ export default function UserHome() {
 
         <div className="features">
           <div className="featurestext">
-            <h2>App Features</h2>
+            <h2 className="fh2">App Features</h2>
             <hr />
-            <p>
+            <p className="fp">
               Step into the future of healthcare with our virtual pharmacy!
               Explore our diverse product catalog, chat directly with
               experienced pharmacists for personalized advice, and simplify your
@@ -58,7 +58,7 @@ export default function UserHome() {
               <div className="fbox">
                 <img src="/images/prodcat.png" alt="pharmapurse"></img>
                 <h2 className="fbox-h2">Product Catalog</h2>
-                <p>
+                <p className="fp">
                   Discover healthier living with our convenient pharmacy
                   pre-order feature and extensive product catalog for all your
                   wellness needs
@@ -74,7 +74,7 @@ export default function UserHome() {
                   alt="pharmapurse"
                 ></img>
                 <h2 className="fbox-h2">Customer Support</h2>
-                <p>
+                <p className="fp">
                   Get Instant Help: Connect with Our Customer Support Chat for
                   Quick and Friendly Assistance!
                 </p>
@@ -89,7 +89,7 @@ export default function UserHome() {
                   alt="pharmapurse"
                 ></img>
                 <h2 className="fbox-h2">Virtual Pillbox</h2>
-                <p>
+                <p className="fp">
                   Never Miss a Dose: Manage Your Medications with Ease Using Our
                   Virtual Pillbox
                 </p>
@@ -101,12 +101,12 @@ export default function UserHome() {
         <div className="siteSection2">
           <img src="/images/homesection2.png" alt="pharmapurse"></img>
           <div className="left2">
-            <h1>Your Health Hub</h1>
-            <p>
+            <h1 className="left2-h1">Your Health Hub</h1>
+            <p className="left2-p">
               Welcome to your one-stop digital health destination. Explore our
               curated catalog, chat with expert pharmacists for instant advice,
               and simplify medication management with our virtual pillbox. Your
-              well-being starts here—discover, connect, and thrive.
+              well-being starts here discover, connect, and thrive.
             </p>
           </div>
         </div>

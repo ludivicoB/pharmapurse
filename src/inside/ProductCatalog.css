@@ -32,7 +32,7 @@ body{
 .featureCategories{
     width: 1233px;
     height: 397px;
-    background-color: white;
+    background-color: #F9FAF5;
     padding-top: 40px;
     display: flex;
     justify-content: center;
@@ -52,7 +52,14 @@ body{
     -webkit-box-shadow: 2px 5px 15px 5px rgba(0,0,0,0.47); 
     box-shadow: 2px 5px 15px 5px rgba(0,0,0,0.47);
 }
-
+.category:hover{
+    -webkit-box-shadow: -1px 5px 18px 14px rgba(135,135,135,0.8); 
+    box-shadow: -1px 5px 18px 14px rgba(135,135,135,0.8);
+    transition: .2s;
+}   
+.category:not(:hover){
+    transition: .2s;
+}
 .thermo{
     width: 86px;
     height: 95px;

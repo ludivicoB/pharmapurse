@@ -1,0 +1,27 @@
+.gap{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding-bottom: 70px;
+    background-color: #BADEFF;
+    text-align: center;
+}
+.pono{
+    padding-top: 30px;
+}
+.bb{
+    display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.obosblue{
+    padding-bottom: 10px;
+}
+.pataas{
+    padding-top: 100px;
+}
+.admincom{
+    padding-bottom: 30px;
+}
+.fboxlink{
+    text-decoration: none;
+}
