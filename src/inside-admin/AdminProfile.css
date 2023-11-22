@@ -1,0 +1,88 @@
+.xax{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding-bottom: 70px;
+    
+    text-align: center;
+}
+.adminprofile{
+    padding-top: 30px;
+}
+.namee{
+    background-color: #BADEFF;
+   margin-right: 500px;
+   margin-left: 500px;
+
+}
+.info{
+    border-style: outset;
+    border-radius: 20px;
+   padding-left: 20px;
+   margin-right: 500px;
+   margin-left: 500px;
+    padding-bottom: 20px;
+}
+.obosave{
+    padding-bottom: 50px;
+}
+
+.johnny{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+}
+.accountinfo{
+    padding-right: 700px;
+    padding-bottom: 10px;
+    
+}
+.username{
+    
+    font-weight: bold;
+}
+.name{
+    padding-right: 30px;
+    font-weight: bold;
+}
+.email{
+    padding-right: 35px;
+    font-weight: bold;
+}
+.password{
+    padding-right: 5px;
+    font-weight: bold;
+}
+.usernam{
+    margin-right: 500px;
+    background-color: #dbe4ec;
+}
+.nam{
+    margin-right: 500px;
+    background-color: #dbe4ec;
+}
+.emai{
+    margin-right: 500px;
+    background-color: #dbe4ec;
+}
+.passwor{
+    margin-right: 500px;
+    background-color: #dbe4ec;
+}
+.save{
+    margin-right: 420px;
+    padding-left: 45px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 45px;
+    background-color: rgb(93, 95, 212);
+    border-radius: 10px;
+}
+.logout{
+    background-color: rgb(93, 95, 212);
+    border-radius: 10px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    margin-left: 480px;
+}
