@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./AdminDashboard.css";
 import "../inside-admin/AdminDashboard.css";
+import { Link } from "react-router-dom";
 import AdminNavbar from "./AdminNavbar";
 export default function AdminDashboard() {
   useEffect(() => {
@@ -20,11 +21,13 @@ export default function AdminDashboard() {
               <h2 className="fbox-h2">Customer Support</h2>
               <p className="fp">View your customer support messages</p>
             </div>
-            <div className="fbox">
-              <img src="/images/userfbox.png" alt="pharmapurse"></img>
-              <h2 className="fbox-h2">View Users</h2>
-              <p className="fp">View your customer/users</p>
-            </div>
+            <Link to="/userList" className="fboxlink">
+              <div className="fbox">
+                <img src="/images/userfbox.png" alt="pharmapurse"></img>
+                <h2 className="fbox-h2">View Users</h2>
+                <p className="fp">View your customer/users</p>
+              </div>
+            </Link>
           </div>
           <div className="obosblue"></div>
         </div>
