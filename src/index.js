@@ -17,6 +17,7 @@ import Products from "./inside/Products";
 import ProductView from "./inside/ProductView";
 import AboutUs from "./inside/AboutUs";
 import MyCart from "./inside/MyCart";
+// import CheckOut from "./inside/CheckOut";
 import AdminDashboard from "./inside-admin/AdminDashboard";
 import AdminProfile from "./inside-admin/AdminProfile";
 import UserList from "./inside-admin/UserList";
@@ -48,6 +49,7 @@ root.render(
         <Route path="/notification" element={<Notification />}></Route>
 
         <Route path="/myCart" element={<MyCart />}></Route>
+        {/* <Route path="/checkOut" element={<CheckOut />}></Route> */}
 
         <Route path="/adminDashboard" element={<AdminDashboard />}></Route>
         <Route path="/adminProfile" element={<AdminProfile />}></Route>

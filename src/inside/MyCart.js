@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./MyCart.css";
 import NavBar from "./NavBar";
 import CartItem from "./singlecomponents/CartItem";
-
+import CheckOut from "./CheckOut";
 export default function MyCart() {
   const [total, setTotal] = useState(0);
   useEffect(() => {
@@ -66,11 +66,16 @@ export default function MyCart() {
                 className="processorder-img"
                 src="/images/continuecheckout.png"
                 alt="continuecheckout.png"
+                onClick={() => {
+                  document.getElementById("overlay").style.display = "block";
+                  document.body.classList.add("overlay-active");
+                }}
               ></img>
             </div>
           </div>
         </div>
       </div>
+      <CheckOut total={total} />
     </>
   );
 }
