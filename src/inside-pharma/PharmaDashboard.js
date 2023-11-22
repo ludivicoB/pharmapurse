@@ -11,7 +11,6 @@ export default function PharmaDashboard() {
   return (
     <div>
       <PharmaNavbar /> {/* Updated component usage */}
-
       {/* App Features */}
       <div className="features">
         <div className="featurestext">
@@ -27,7 +26,7 @@ export default function PharmaDashboard() {
           </p>
         </div>
         <div className="fbox-container">
-          <Link to="/customerSupport" className="link-nounder">
+          <Link to="" className="link-nounder">
             <div className="fbox">
               <img
                 className="cutsup"
@@ -40,7 +39,6 @@ export default function PharmaDashboard() {
           </Link>
         </div>
       </div>
-
       {/* Pharmacist Hub */}
       <div className="siteSection2">
         <img src="/images/homesection2.png" alt="pharmapurse"></img>
@@ -54,7 +52,6 @@ export default function PharmaDashboard() {
           </p>
         </div>
       </div>
-
       {/* Footer */}
       <footer>
         <div className="footer-container">
