@@ -106,7 +106,7 @@ export default function UserHome() {
               Welcome to your one-stop digital health destination. Explore our
               curated catalog, chat with expert pharmacists for instant advice,
               and simplify medication management with our virtual pillbox. Your
-              well-being starts here—discover, connect, and thrive.
+              well-being starts here discover, connect, and thrive.
             </p>
           </div>
         </div>
