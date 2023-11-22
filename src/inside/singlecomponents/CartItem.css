@@ -1,0 +1,57 @@
+.cartitem-container{
+    width: 700px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: #EEEEEE;
+    margin: 10px;
+    -webkit-box-shadow: 2px 5px 15px 5px rgba(0,0,0,0.22); 
+    box-shadow: 2px 5px 15px 5px rgba(0,0,0,0.22);
+}
+.cartitem-delete{
+    margin: 5px;
+    float: right;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.695);
+}
+.cartitem-delete:hover{
+    background-color: gray;
+    color: white;
+}
+.cartitem-container:hover{
+    /* background-color: #d2d2d2; */
+    -webkit-box-shadow: 2px 5px 15px 5px rgba(0,0,0,0.41); 
+    box-shadow: 2px 5px 15px 5px rgba(0,0,0,0.41);
+    transition: .3s;
+}
+.cartitem-container:not(:hover){
+    transition: .3s;
+}
+.cartitem-body{
+    display: flex;
+    justify-content: center;
+    /* align-items: center;  */
+}
+.cartitem-name{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-wrap: wrap;
+    padding: 20px;
+}
+.cartitem-img{
+    width: 200px;
+    height: 100px;
+    margin-left: 20px;
+}
+.cartitem-table{
+    margin-left: auto;
+    margin-right: 20px;
+    text-align: center;
+    border-collapse: collapse;
+}
+.cartitem-th{
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}

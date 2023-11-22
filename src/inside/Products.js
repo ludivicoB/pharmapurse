@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Products.css";
 import NavBar from "./NavBar";
 import ProductCard from "./singlecomponents/ProductCard";
 import { Link } from "react-router-dom";
 export default function Products() {
+  useEffect(() => {});
   const products = [
     {
       name: "PARACETAMOL Biogesic Tablet 10s",
