@@ -21,11 +21,13 @@ export default function AdminNavbar() {
             <button className="admin-homebtn">Notification</button>
           </Link>
           <p className="admin-p">Admin</p>
-          <img
-            className="admin-accimg"
-            src="/images/account.png"
-            alt="pharmapurse"
-          ></img>
+          <Link to="/adminProfile" className="admin-profilebtn">
+            <img
+              className="admin-accimg"
+              src="/images/account.png"
+              alt="pharmapurse"
+            ></img>
+          </Link>
         </div>
       </div>
     </>
