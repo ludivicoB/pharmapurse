@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import "./PharmaDashboard.css";
-import NavBar from "../inside/NavBar";
+import PharmaNavbar from "./PharmaNavbar"; // Updated import statement
+import { Link } from "react-router-dom";
 
 export default function PharmaDashboard() {
   useEffect(() => {
@@ -10,8 +10,7 @@ export default function PharmaDashboard() {
 
   return (
     <div>
-      <NavBar />
-     
+      <PharmaNavbar /> {/* Updated component usage */}
 
       {/* App Features */}
       <div className="features">
@@ -19,9 +18,12 @@ export default function PharmaDashboard() {
           <h2>Pharmacist Commands</h2>
           <hr />
           <p>
-          This platform enhances collaboration among pharmacy staff, facilitating seamless communication 
-          and coordination. PharmaPurse represents a significant leap forward in the digitization of pharmacy
-          operations, providing a comprehensive solution for pharmacists to optimize their workflow and deliver exceptional patient care.
+            This platform enhances collaboration among pharmacy staff,
+            facilitating seamless communication and coordination. PharmaPurse
+            represents a significant leap forward in the digitization of
+            pharmacy operations, providing a comprehensive solution for
+            pharmacists to optimize their workflow and deliver exceptional
+            patient care.
           </p>
         </div>
         <div className="fbox-container">
@@ -33,9 +35,7 @@ export default function PharmaDashboard() {
                 alt="pharmapurse"
               ></img>
               <h2 className="fbox-h2">Customer Order Manager</h2>
-              <p>
-                Manage customer orders and handle them efficiently.
-              </p>
+              <p>Manage customer orders and handle them efficiently.</p>
             </div>
           </Link>
         </div>
