@@ -8,18 +8,28 @@
 .adminprofile{
     padding-top: 30px;
 }
+.center{
+    display: flex;
+    justify-content: center;
+}
+.container-div{
+    border: 1px solid black;
+}
 .namee{
+    width: 1000px;
     background-color: #BADEFF;
-   margin-right: 500px;
-   margin-left: 500px;
+    /* margin-right: 500px; */
+   /* margin-left: 500px; */
 
 }
 .info{
-    border-style: outset;
-    border-radius: 20px;
-   padding-left: 20px;
-   margin-right: 500px;
-   margin-left: 500px;
+    width: 1000px;
+    border: 1px solid rgba(0, 0, 0, 0.364);
+    /* border-style: outset; */
+    /* border-radius: 20px; */
+   /* padding-left: 20px; */
+   /* margin-right: 500px; */
+   /* margin-left: 500px; */
     padding-bottom: 20px;
 }
 .obosave{
@@ -29,7 +39,8 @@
 .johnny{
     padding-top: 30px;
     padding-bottom: 30px;
-    padding-right: 30px;
+    /* padding-right: 30px; */
+    margin: 0px;
 }
 .accountinfo{
     padding-right: 700px;
