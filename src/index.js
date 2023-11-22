@@ -16,7 +16,9 @@ import ProductCatalog from "./inside/ProductCatalog";
 import Products from "./inside/Products";
 import ProductView from "./inside/ProductView";
 import AboutUs from "./inside/AboutUs";
+import MyCart from "./inside/MyCart";
 import AdminDashboard from "./inside-admin/AdminDashboard";
+import AdminProfile from "./inside-admin/AdminProfile";
 import PharmaDashboard from "./inside-pharma/PharmaDashboard";
 import Notification from "./inside/Notification";
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -42,7 +44,10 @@ root.render(
 
         <Route path="/notification" element={<Notification />}></Route>
 
+        <Route path="/myCart" element={<MyCart />}></Route>
+
         <Route path="/adminDashboard" element={<AdminDashboard />}></Route>
+        <Route path="/adminProfile" element={<AdminProfile />}></Route>
 
         <Route path="/pharmaDashboard" element={<PharmaDashboard />}></Route>
       </Routes>
