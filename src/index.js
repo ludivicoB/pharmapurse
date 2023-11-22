@@ -21,6 +21,7 @@ import AdminDashboard from "./inside-admin/AdminDashboard";
 import AdminProfile from "./inside-admin/AdminProfile";
 import UserList from "./inside-admin/UserList";
 import PharmaDashboard from "./inside-pharma/PharmaDashboard";
+import OrderManager from "./inside-pharma/OrderManager";
 import Notification from "./inside/Notification";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -52,6 +53,7 @@ root.render(
         <Route path="/userList" element={<UserList />}></Route>
 
         <Route path="/pharmaDashboard" element={<PharmaDashboard />}></Route>
+        <Route path="/orderManager" element={<OrderManager />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
