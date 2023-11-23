@@ -3,13 +3,19 @@
   margin-top: 30px;
   display: flex;
   justify-content: center;
+
  /* width: 1233px; */
+}
+.admin-h1-container{
+  -webkit-box-shadow: -3px 5px 15px 5px rgba(0,0,0,0.31); 
+  box-shadow: -3px 5px 15px 5px rgba(0,0,0,0.31);
 }
 .admin-h1{
   padding: 20px;
   text-align: center;
   background-color: #BADEFF;
   margin-bottom: 0px;
+  margin-top: 0px;
 }
 .admin-userlist-bodylist{
   background-color: white;
