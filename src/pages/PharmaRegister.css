@@ -1,5 +1,12 @@
 
-  
+.pharmalogin-backbtn{
+  background-color: #4BC4EA;
+  color: white;
+  border: 1px solid #6AB3F7;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  float: right;
+}
   .loginbox{
     margin: 1%;
     border-radius: 20px;

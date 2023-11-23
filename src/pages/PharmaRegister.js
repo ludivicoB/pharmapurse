@@ -18,14 +18,14 @@ export default function PharmaRegister() {
                 placeholder="firstname"
                 type="text"
               ></input>
-                 <br/>
+              <br />
               <input
                 className="Registerinput"
                 placeholder="lastname"
                 type="text"
               ></input>
               <br />
-           
+
               <input
                 className="Registerinput"
                 placeholder="username"
@@ -43,8 +43,8 @@ export default function PharmaRegister() {
                 placeholder="password"
                 type="password"
               ></input>
-              <br/>
-            
+              <br />
+
               <br />
               <button className="pharmaregister-btnregister">Register</button>
               <hr />
@@ -54,7 +54,9 @@ export default function PharmaRegister() {
             </div>
           </div>
           <div className="right">
-            {/* <img src="" alt="pharmapurse"></img> */}
+            <Link to="/">
+              <button className="pharmalogin-backbtn">Back</button>
+            </Link>
           </div>
         </div>
       </div>
