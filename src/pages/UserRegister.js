@@ -26,7 +26,7 @@ export default function UserRegister() {
       console.log("Registration successful:", postData);
       alert("Registration successful, You may now proceed to login");
       // Handle success (e.g., redirect, show a success message to the user)
-      // window.location.reload();
+      window.location.reload();
     } catch (error) {
       console.error("Error registering user:", error);
       // Handle error (e.g., show an error message to the user)
