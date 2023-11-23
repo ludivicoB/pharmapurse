@@ -50,7 +50,11 @@ export default function AdminRegister() {
               </Link>
             </div>
           </div>
-          <div className="r">{/* <img src="" alt="pharmapurse"></img> */}</div>
+          <div className="r">
+            <Link to="/">
+              <button className="pharmalogin-backbtn">Back</button>
+            </Link>
+          </div>
         </div>
       </div>
     </>
