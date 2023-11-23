@@ -18,33 +18,7 @@ export default function Products() {
         console.error("Error fetching users:", error);
       });
   }, []);
-  // const products = [
-  //   {
-  //     name: "PARACETAMOL Biogesic Tablet 10s",
-  //     price: "31.25",
-  //     image: "bio.png",
-  //   },
-  //   {
-  //     name: "SALONSIPMethyl Salicylate Gel Patch x 2 Patches/Pack",
-  //     price: "91.25",
-  //     image: "salon.png",
-  //   },
-  //   {
-  //     name: "Calcuimide Calcium + Vitamin D + Mineral 1 Tablet",
-  //     price: "11.50",
-  //     image: "cal.png",
-  //   },
-  //   {
-  //     name: "CENTRUM Silver Advance Multivitamins 30 Tablets",
-  //     price: "365.00",
-  //     image: "cent.png",
-  //   },
-  //   {
-  //     name: "NORVASC Amlodipine 10mg 30 tablets",
-  //     price: "21.00",
-  //     image: "nor.png",
-  //   },
-  // ];
+
   return (
     <>
       <NavBar />
