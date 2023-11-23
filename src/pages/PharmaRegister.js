@@ -15,10 +15,17 @@ export default function PharmaRegister() {
             <div className="form">
               <input
                 className="Registerinput"
-                placeholder="name"
+                placeholder="firstname"
+                type="text"
+              ></input>
+                 <br/>
+              <input
+                className="Registerinput"
+                placeholder="lastname"
                 type="text"
               ></input>
               <br />
+           
               <input
                 className="Registerinput"
                 placeholder="username"
@@ -36,12 +43,8 @@ export default function PharmaRegister() {
                 placeholder="password"
                 type="password"
               ></input>
-              <br />
-              <input
-                className="Registerinput"
-                placeholder="confirm password"
-                type="password"
-              ></input>
+              <br/>
+            
               <br />
               <button className="pharmaregister-btnregister">Register</button>
               <hr />

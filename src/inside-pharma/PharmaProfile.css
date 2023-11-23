@@ -13,10 +13,12 @@
 .center {
   display: flex;
   justify-content: center;
+   
 }
 
 .container-div {
   border: 1px solid black;
+  
 }
 
 .namee {
