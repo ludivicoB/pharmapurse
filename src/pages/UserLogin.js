@@ -69,7 +69,7 @@ export default function UserLogin() {
               <input
                 className="userlogin-input"
                 type="text"
-                placeholder="✉️ username "
+                placeholder="👨‍🦲 username "
                 id="username"
               ></input>
               <br />
