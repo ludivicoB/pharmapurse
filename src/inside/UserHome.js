@@ -3,7 +3,9 @@ import "./style.css";
 import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { useUser } from "../pages/ProviderUser";
 export default function UserHome() {
+  // const { user } = useUser();
   useEffect(() => {
     window.scrollTo(0, 0);
   });
