@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import UserLogin from "./pages/UserLogin";
+import { ProviderUser } from "./pages/ProviderUser";
 import UserRegister from "./pages/UserRegister";
 import PharmaLogin from "./pages/PharmaLogin";
 import PharmaRegister from "./pages/PharmaRegister";
@@ -30,35 +31,37 @@ root.render(
   <React.StrictMode>
     {/* <UserHome /> */}
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/user" element={<UserLogin />}></Route>
-        <Route path="/userRegister" element={<UserRegister />} />
-        <Route path="/pharmacist" element={<PharmaLogin />}></Route>
-        <Route path="/pharmacistRegister" element={<PharmaRegister />} />
-        <Route path="/admin" element={<AdminLogin />}></Route>
-        <Route path="/adminRegister" element={<AdminRegister />} />
-        <Route path="/home" element={<UserHome />}></Route>
-        <Route path="/aboutUs" element={<AboutUs />}></Route>
-        <Route path="/customerSupport" element={<CustomerSupport />}></Route>
-        <Route path="/productCatalog" element={<ProductCatalog />}></Route>
+      <ProviderUser>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/user" element={<UserLogin />}></Route>
+          <Route path="/userRegister" element={<UserRegister />} />
+          <Route path="/pharmacist" element={<PharmaLogin />}></Route>
+          <Route path="/pharmacistRegister" element={<PharmaRegister />} />
+          <Route path="/admin" element={<AdminLogin />}></Route>
+          <Route path="/adminRegister" element={<AdminRegister />} />
+          <Route path="/home" element={<UserHome />}></Route>
+          <Route path="/aboutUs" element={<AboutUs />}></Route>
+          <Route path="/customerSupport" element={<CustomerSupport />}></Route>
+          <Route path="/productCatalog" element={<ProductCatalog />}></Route>
 
-        <Route path="/products" element={<Products />}></Route>
-        <Route path="/productView" element={<ProductView />}></Route>
+          <Route path="/products" element={<Products />}></Route>
+          <Route path="/productView" element={<ProductView />}></Route>
 
-        <Route path="/notification" element={<Notification />}></Route>
+          <Route path="/notification" element={<Notification />}></Route>
 
-        <Route path="/myCart" element={<MyCart />}></Route>
-        {/* <Route path="/checkOut" element={<CheckOut />}></Route> */}
+          <Route path="/myCart" element={<MyCart />}></Route>
+          {/* <Route path="/checkOut" element={<CheckOut />}></Route> */}
 
-        <Route path="/adminDashboard" element={<AdminDashboard />}></Route>
-        <Route path="/adminProfile" element={<AdminProfile />}></Route>
-        <Route path="/userList" element={<UserList />}></Route>
+          <Route path="/adminDashboard" element={<AdminDashboard />}></Route>
+          <Route path="/adminProfile" element={<AdminProfile />}></Route>
+          <Route path="/userList" element={<UserList />}></Route>
 
-        <Route path="/pharmaDashboard" element={<PharmaDashboard />}></Route>
-        <Route path="/pharmaProfile" element={<PharmaProfile />}></Route>
-        <Route path="/orderManager" element={<OrderManager />}></Route>
-      </Routes>
+          <Route path="/pharmaDashboard" element={<PharmaDashboard />}></Route>
+          <Route path="/pharmaProfile" element={<PharmaProfile />}></Route>
+          <Route path="/orderManager" element={<OrderManager />}></Route>
+        </Routes>
+      </ProviderUser>
     </BrowserRouter>
   </React.StrictMode>
 );
