@@ -1,0 +1,103 @@
+.center{
+    margin-top: 101px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.userprofile-container{
+    margin-top: 40px;
+    width: 1233px;
+    margin-bottom: 60px;
+    -webkit-box-shadow: -1px 5px 15px 5px rgba(0,0,0,0.55); 
+    box-shadow: -1px 5px 15px 5px rgba(0,0,0,0.55);
+}
+.userprofile-h1-container{
+    background-color: #C4E3FF;
+    margin-bottom: 0px;
+
+}
+.userprofile-h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 40px;
+    padding: 20px;
+}
+.userprofile-body{
+    margin-top: 0px;
+    background-color: white;
+    display: flex;
+}
+.userprofile-bodyleft{
+    padding: 30px;
+    width: 80%;
+}
+.userprofile-p{
+    text-align: left;
+    font-size: 28px;
+    font-weight: 500;
+}
+.userprofile-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+.userprofile-p1{
+    font-size: 25px;
+}
+.userprofile-input{
+    background-color: #D9D9D9;
+    border: none;
+    width: 510px;
+    height: 56px;
+    margin-left: 0px;
+    text-align: center;
+    font-size: 25px;
+    padding: 0px;
+}
+.userprofile-bodyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    background-color: #233348;
+}
+.userprofile-logoutbtn{
+    cursor: pointer;
+    width: 90%;
+    background-color: #436cff8b;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.userprofile-logoutbtn:hover{
+    background-color: #436cff;
+    color: rgb(232, 232, 232);
+    transition: .3s;
+}
+.userprofile-logoutbtn:not(:hover){
+    transition: .3s;
+}
+.userprofile-savebtn{
+    cursor: pointer;
+    width: 20%;
+    margin-top: 20px;
+    background-color: #436cff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.userprofile-savebtn:hover{
+    background-color: #233348;
+    color: rgb(232, 232, 232);
+    transition: .3s;
+}
+.userprofile-savebtn:not(:hover){
+    transition: .3s;
+}

@@ -27,11 +27,13 @@ export default function NavBar() {
           <Link to="/aboutUs" className="homebtn">
             <button className="homebtn">About Us</button>
           </Link>
-          <img
-            className="accimg"
-            src="/images/account.png"
-            alt="pharmapurse"
-          ></img>
+          <Link to="/userProfile" className="accimg">
+            <img
+              className="accimg"
+              src="/images/account.png"
+              alt="pharmapurse"
+            ></img>
+          </Link>
         </div>
       </div>
     </>

@@ -12,6 +12,7 @@ import PharmaRegister from "./pages/PharmaRegister";
 import AdminLogin from "./pages/AdminLogin";
 import AdminRegister from "./pages/AdminRegister";
 import UserHome from "./inside/UserHome";
+import UserProfile from "./inside/UserProfile";
 import CustomerSupport from "./inside/CustomerSupport";
 import ProductCatalog from "./inside/ProductCatalog";
 import Products from "./inside/Products";
@@ -47,7 +48,7 @@ root.render(
 
           <Route path="/products" element={<Products />}></Route>
           <Route path="/productView" element={<ProductView />}></Route>
-
+          <Route path="/userProfile" element={<UserProfile />}></Route>
           <Route path="/notification" element={<Notification />}></Route>
 
           <Route path="/myCart" element={<MyCart />}></Route>
