@@ -11,6 +11,12 @@ export default function CustomerSupport() {
     window.scrollTo(0, 0);
   });
   const HandleMessageClick = async () => {
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.getFullYear()}-${(
+      currentDate.getMonth() + 1
+    )
+      .toString()
+      .padStart(2, "0")}-${currentDate.getDate().toString().padStart(2, "0")}`;
     const subject = document.getElementById("subject").value;
     const message = document.getElementById("message").value;
     if (subject !== "" && message !== "") {
@@ -20,6 +26,7 @@ export default function CustomerSupport() {
           subject: subject,
           message: message,
           isread: false,
+          date: formattedDate,
         });
         console.log("Message sent successful:");
         alert("Message sent successful.");
