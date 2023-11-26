@@ -22,8 +22,10 @@
 .CustomerMessageInbox-content-body{
     background-color: white;
     padding: 5px;
+    padding-bottom: 10px;
 }
 .messagecard{
+    margin-top: 5px;
     background-color: #F7F7F7;
     border: 1px solid black;
     border-radius: 8px;
