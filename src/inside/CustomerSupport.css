@@ -21,7 +21,7 @@ body{
     opacity: 0.5;
     padding-bottom: 40px;
 }
-.center{
+.customer-support-center{
     display: flex;
     justify-content: center;
 }
@@ -47,6 +47,10 @@ body{
     display: flex;
     width: 657px;
     height: 287px;
+    max-width: 657px;
+    min-width: 657px;
+    min-height: 287px;
+    max-height: 287px;
 }
 .btnsend{
     margin-top: 20px;

@@ -24,13 +24,13 @@ export default function CustomerSupport() {
           </p>
         </div>
       </div>
-      <div className="center">
+      <div className="customer-support-center">
         <div className="contact-form">
           <p className="contact-form-p">Subject</p>
           <input className="subject-input"></input>
 
           <p>How can I help you</p>
-          <input className="txtarea"></input>
+          <textarea className="txtarea"></textarea>
           <br />
           <button className="btnsend">Send</button>
         </div>
