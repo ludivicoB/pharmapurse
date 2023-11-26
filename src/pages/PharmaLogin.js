@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import "../pages/PharmaLogin.css";
 import axios from "axios";
 import { Link,useNavigate } from "react-router-dom";
+import { useUser } from "../pages/ProviderUser";
 export default function PharmaLogin() {
+  const { login } = useUser();
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const handleLogIn = async () => {
@@ -30,7 +32,7 @@ export default function PharmaLogin() {
 
         if (user) {
           // Login successful
-        
+          login(user);
           setIsLoggedIn(true);
           console.log("User logged in:", user);
         } else {
