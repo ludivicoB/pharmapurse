@@ -18,8 +18,44 @@
   margin-top: 0px;
 }
 .admin-userlist-bodylist{
+  padding: 20px;
   background-color: white;
   width: 1233px;
-  height: 500px;
+  /* height: 500px; */
+  display: flex;
+  justify-content: center;
+
 }
-  
+.usercard-container{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 40px;
+  width: 238px;
+  height: 259px;
+  background-color: #8AE0FE;
+  text-align: center;
+}
+.usercard-container:hover{
+  -webkit-box-shadow: -3px 5px 15px 5px rgba(0,0,0,0.31);
+  box-shadow: -3px 5px 15px 5px rgba(0,0,0,0.31);
+  transition: .2s;
+}
+.usercard-container:not(:hover){
+  transition: .2s;
+}
+.usercard-head{
+  text-align: right;
+}
+.usercard-gear{
+  cursor: pointer;
+}
+.usercard-gear:hover{
+  transform: scale(1.2);
+  transition: .2s;
+}
+.usercard-gear:not(:hover){
+  transition: .2s;
+}
+.usercard-name{
+  font-size: 18px;
+}
