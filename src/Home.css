@@ -19,17 +19,20 @@ body{
     
 }
 .control-buttons{
-    width: 70%;
+    padding: 30px;
     background-color: white;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    gap: 1rem;
+    flex-direction: ; */
+    /* gap: 1rem; */
     -webkit-box-shadow: 0px 7px 15px 2px rgba(0,0,0,0.5); 
     box-shadow: 0px 7px 15px 2px rgba(0,0,0,0.5);
 }
 .home-btn{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    /* margin-top: 50px;
+    margin-bottom: 50px; */
+    border: none;
+    margin: 20px;
     cursor: pointer;
     width: 300px;
     color: white;
@@ -37,4 +40,15 @@ body{
     background-color: #4B70EA;
     border-color: #6AB3F7;
     padding: 10px;
+}
+.home-btn:hover{
+    background-color: #2a4294;
+}
+.user-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-icon{
+    width: 30px;
 }
