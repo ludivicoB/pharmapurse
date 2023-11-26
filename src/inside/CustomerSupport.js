@@ -2,10 +2,38 @@ import React from "react";
 import NavBar from "./NavBar";
 import "./CustomerSupport.css";
 import { useEffect } from "react";
+import { useUser } from "../pages/ProviderUser";
+import { Link } from "react-router-dom";
+import axios from "axios";
 export default function CustomerSupport() {
+  const { user } = useUser();
   useEffect(() => {
     window.scrollTo(0, 0);
   });
+  const HandleMessageClick = async () => {
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+    if (subject !== "" && message !== "") {
+      try {
+        await axios.post("http://localhost:8080/message/insertMessage", {
+          userid: user.userID,
+          subject: subject,
+          message: message,
+          isread: false,
+        });
+        console.log("Message sent successful:");
+        alert("Message sent successful.");
+        document.getElementById("subject").value = "";
+        document.getElementById("message").value = "";
+      } catch (error) {
+        console.error("Error sending message:", error);
+        // Handle error (e.g., show an error message to the user)
+      }
+    } else {
+      alert("Please fill in all fields.");
+      return;
+    }
+  };
   return (
     <>
       <NavBar />
@@ -27,12 +55,14 @@ export default function CustomerSupport() {
       <div className="customer-support-center">
         <div className="contact-form">
           <p className="contact-form-p">Subject</p>
-          <input className="subject-input"></input>
+          <input className="subject-input" id="subject"></input>
 
           <p>How can I help you</p>
-          <textarea className="txtarea"></textarea>
+          <textarea className="txtarea" id="message"></textarea>
           <br />
-          <button className="btnsend">Send</button>
+          <button className="btnsend" onClick={HandleMessageClick}>
+            Send
+          </button>
         </div>
       </div>
     </>
