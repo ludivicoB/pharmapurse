@@ -16,11 +16,13 @@ export default function AdminDashboard() {
             <h1 className="admincom">Admin Commands</h1>
           </div>
           <div className="bb">
-            <div className="fbox">
-              <img src="/images/cutsup.png" alt="pharmapurse"></img>
-              <h2 className="fbox-h2">Customer Support</h2>
-              <p className="fp">View your customer support messages</p>
-            </div>
+            <Link to="/customerMessageInbox" className="fboxlink">
+              <div className="fbox">
+                <img src="/images/cutsup.png" alt="pharmapurse"></img>
+                <h2 className="fbox-h2">Customer Support</h2>
+                <p className="fp">View your customer support messages</p>
+              </div>
+            </Link>
             <Link to="/userList" className="fboxlink">
               <div className="fbox">
                 <img src="/images/userfbox.png" alt="pharmapurse"></img>

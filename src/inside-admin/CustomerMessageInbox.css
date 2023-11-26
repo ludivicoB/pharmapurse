@@ -1,0 +1,53 @@
+.center-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CustomerMessageInbox{
+    margin-top: 30px;
+    background-color: rgba(209, 240, 255, 0.902);
+    padding: 20px;
+    width: 1233px;
+}
+.CustomerMessageInbox-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.CustomerMessageInbox-content-header{
+    padding: 10px;
+    background-color: #9ADEE8;
+    text-align: center;
+}
+.CustomerMessageInbox-content-body{
+    background-color: white;
+    padding: 5px;
+}
+.messagecard{
+    background-color: #F7F7F7;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+.messagecard-info{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #dbd8d8;
+    border-radius: 8px;
+}
+.messagecard-span{
+    font-weight: bold;
+}
+.messagecard-message{
+    padding: 20px;
+    display: none;
+}
+.messagee{
+    font-weight: bold;
+}
+.message-span{
+    font-weight: 400;
+}
+.message-text{
+    font-style: italic;
+}

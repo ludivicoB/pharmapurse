@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../pages/AdminLogin.css";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useUser } from "../pages/ProviderUser";
 export default function AdminLogin() {
   const { login } = useUser();
@@ -53,7 +53,7 @@ export default function AdminLogin() {
     if (isLoggedIn) {
       navigate("/adminDashboard");
     }
-  },  [isLoggedIn,navigate]);
+  }, [isLoggedIn, navigate]);
   return (
     <>
       <div className="loginbox-container">
@@ -79,7 +79,7 @@ export default function AdminLogin() {
                 id="password"
               ></input>
               <br />
-              <button className="btnlogin" onClick={handleLogIn}>
+              <button className="adminlogin-btnlogin" onClick={handleLogIn}>
                 Login
               </button>
               <hr />

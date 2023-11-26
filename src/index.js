@@ -22,6 +22,7 @@ import MyCart from "./inside/MyCart";
 // import CheckOut from "./inside/CheckOut";
 import AdminDashboard from "./inside-admin/AdminDashboard";
 import AdminProfile from "./inside-admin/AdminProfile";
+import CustomerMessageInbox from "./inside-admin/CustomerMessageInbox";
 import UserList from "./inside-admin/UserList";
 import PharmaDashboard from "./inside-pharma/PharmaDashboard";
 import PharmaProfile from "./inside-pharma/PharmaProfile";
@@ -57,6 +58,10 @@ root.render(
           <Route path="/adminDashboard" element={<AdminDashboard />}></Route>
           <Route path="/adminProfile" element={<AdminProfile />}></Route>
           <Route path="/userList" element={<UserList />}></Route>
+          <Route
+            path="/customerMessageInbox"
+            element={<CustomerMessageInbox />}
+          ></Route>
 
           <Route path="/pharmaDashboard" element={<PharmaDashboard />}></Route>
           <Route path="/pharmaProfile" element={<PharmaProfile />}></Route>
