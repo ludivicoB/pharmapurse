@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../pages/AdminLogin.css";
 import { Link,useNavigate } from "react-router-dom";
+import { useUser } from "../pages/ProviderUser";
 export default function AdminLogin() {
+  const { login } = useUser();
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const handleLogIn = async () => {
@@ -30,7 +32,7 @@ export default function AdminLogin() {
 
         if (user) {
           // Login successful
-        
+          login(user);
           setIsLoggedIn(true);
           console.log("User logged in:", user);
         } else {
