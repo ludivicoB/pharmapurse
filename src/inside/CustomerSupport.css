@@ -40,8 +40,9 @@ body{
 .subject-input{
     border: 1px solid #3c3c4386;
     width: 327px;
-    height: 48px;
+    height: 38px;
     border-radius: 7px;
+    padding: 10px;
 }
 .txtarea{
     display: flex;
@@ -51,8 +52,11 @@ body{
     min-width: 657px;
     min-height: 287px;
     max-height: 287px;
+    padding: 10px;
 }
 .btnsend{
+    cursor: pointer;
+    font-weight: 600;
     margin-top: 20px;
     margin-bottom: 20px;
     color: black;
@@ -62,4 +66,7 @@ body{
     font-size: 16px;
     width: 183px;
     height: 48px;
+}
+.btnsend:hover{
+    background-color: #6ab3f7;
 }
