@@ -4,10 +4,13 @@
     align-items: center;
 }
 .CustomerMessageInbox{
-    margin-top: 30px;
+    margin-top: 40px;
     background-color: rgba(209, 240, 255, 0.902);
     padding: 20px;
     width: 1233px;
+    -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.4); 
+    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.4);
+    padding-bottom: 40px;
 }
 .CustomerMessageInbox-header{
     display: flex;
@@ -22,13 +25,22 @@
 .CustomerMessageInbox-content-body{
     background-color: white;
     padding: 5px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
+    padding-top: 20px;
 }
 .messagecard{
-    margin-top: 5px;
+    margin-top: 10px;
     background-color: #F7F7F7;
     border: 1px solid black;
     border-radius: 8px;
+}
+.messagecard:hover{
+    -webkit-box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.4); 
+    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.4);
+    transition: .2s;
+}
+.messagecard:not(:hover){
+    transition: .2s;
 }
 .messagecard-info{
     display: flex;
