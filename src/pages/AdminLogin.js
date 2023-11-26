@@ -1,10 +1,57 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "../pages/AdminLogin.css";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 export default function AdminLogin() {
+  const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const handleLogIn = async () => {
+    if (
+      document.getElementById("username").value !== "" ||
+      document.getElementById("password").value !== ""
+    ) {
+      const username = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      try {
+        const response = await axios.get(
+          "http://localhost:8080/admin/getAllAdmins",
+          {
+            username: document.getElementById("username").value,
+            pass: document.getElementById("password").value,
+          }
+        );
+
+        const users = response.data;
+
+        const user = users.find(
+          (user) => user.username === username && user.password === pass
+        );
+
+        if (user) {
+          // Login successful
+        
+          setIsLoggedIn(true);
+          console.log("User logged in:", user);
+        } else {
+          alert("Invalid username or password");
+          // Handle invalid login (show error message, etc.)
+        }
+      } catch (error) {
+        console.error("There was a problem with the login operation:", error);
+        // Handle login failure, show error message, etc.
+      }
+    } else {
+      alert("Please enter username or password");
+      return;
+    }
+  };
   useEffect(() => {
-    document.body.style.backgroundColor = "#E7EFFF";
-  }, []);
+    // Check if registration is successful
+    if (isLoggedIn) {
+      navigate("/adminDashboard");
+    }
+  },  [isLoggedIn,navigate]);
   return (
     <>
       <div className="loginbox-container">
@@ -20,17 +67,19 @@ export default function AdminLogin() {
                 className="adminlogin-input"
                 placeholder="👨‍💻 username"
                 type="text"
+                id="username"
               ></input>
               <br />
               <input
                 className="adminlogin-input"
                 placeholder="🔒 password"
                 type="password"
+                id="password"
               ></input>
               <br />
-              <Link to="/adminDashboard">
-                <button className="adminlogin-btnlogin">Login</button>
-              </Link>
+              <button className="btnlogin" onClick={handleLogIn}>
+                Login
+              </button>
               <hr />
               <Link to="/adminRegister">
                 <button className="adminlogin-btnregister">Register</button>
