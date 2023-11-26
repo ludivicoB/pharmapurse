@@ -1,8 +1,25 @@
 import React from "react";
 import "./ProductCard.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useUser } from "../../pages/ProviderUser";
 export default function ProductCard(props) {
-  // console.log("props", props);
+  const { getProduct } = useUser();
+  const [isProduct, setIsProduct] = useState(false);
+  const navigate = useNavigate();
+  const handleClick = () => {
+    const product = props.products;
+    if (product) {
+      getProduct(product);
+      setIsProduct(true);
+    }
+  };
+  useEffect(() => {
+    if (isProduct) {
+      navigate("/productView");
+    }
+  });
+
   return (
     <>
       <div className="product-card-container">
@@ -20,6 +37,7 @@ export default function ProductCard(props) {
             src="/images/addcartbtn.png"
             alt="pic"
             title="add to cart"
+            onClick={handleClick}
           ></img>
         </Link>
       </div>

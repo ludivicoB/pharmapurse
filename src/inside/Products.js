@@ -22,7 +22,7 @@ export default function Products() {
   return (
     <>
       <NavBar />
-      <div className="center">
+      <div className="products-center">
         <div className="product-feature-container">
           <div className="product-titleFeature">
             <img src="/images/productCatalog.png" alt="pic"></img>

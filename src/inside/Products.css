@@ -1,8 +1,8 @@
 body{
     background-color: #E7EFFF;
 }
-.center{
-    margin-top: 26px;
+.products-center{
+    margin-top: 25px;
     /* width: 9000; */
     display: flex;
     justify-content: center;

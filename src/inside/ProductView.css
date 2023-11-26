@@ -1,7 +1,14 @@
+.productview-center{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .productview-container{
     display: flex;
     justify-content: flex-start;
     width: 1233px;
+    text-align: left;
 }
 .product-left{
     width: 40%;

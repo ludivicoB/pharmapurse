@@ -2,12 +2,15 @@ import React from "react";
 import NavBar from "./NavBar";
 import "./ProductView.css";
 import { Link } from "react-router-dom";
-export default function ProductView(props) {
-  console.log("props", props.products);
+import { useUser } from "../pages/ProviderUser";
+export default function ProductView() {
+  const { product, user } = useUser();
+  console.log(product);
+  console.log(user);
   return (
     <>
       <NavBar />
-      <div className="center">
+      <div className="productview-center">
         <div className="product-feature-container">
           <div className="product-titleFeature">
             <img src="/images/productCatalog.png" alt="pic"></img>
@@ -26,19 +29,19 @@ export default function ProductView(props) {
               <div className="product-left">
                 <img
                   className="product-img"
-                  src="/images/bio.png"
+                  src={product.imgsrc}
                   alt="pic"
                 ></img>
                 {/* <img src={`/images/${product.image}`} alt="pic"></img> */}
               </div>
               <div className="product-right">
                 <div className="productright-info">
-                  <h2 className="productright-name">
-                    PARACETAMOL Biogesic Tablet 500s
-                  </h2>
+                  <h2 className="productright-name">{product.name}</h2>
                   <p className="productright-price">
                     Price -{" "}
-                    <span className="productright-pricespan">₱31.25</span>
+                    <span className="productright-pricespan">
+                      ₱ {product.price}
+                    </span>
                   </p>
                   <span className="productright-quantity">Quantity</span>
                   <input
