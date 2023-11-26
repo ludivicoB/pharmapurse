@@ -39,7 +39,7 @@ export default function MyCart() {
   return (
     <>
       <NavBar />
-      <div className="center">
+      <div className="mycart-center">
         <div className="mycart-container">
           <img
             className="mycart-title"

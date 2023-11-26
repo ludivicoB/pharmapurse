@@ -4,7 +4,7 @@ import "./CheckOut.css";
 export default function CheckOut(props) {
   return (
     <>
-      <div className="center">
+      <div className="checkout-center">
         <div className="overlay" id="overlay">
           <button
             className="close-btn"
