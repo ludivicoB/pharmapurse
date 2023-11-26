@@ -1,7 +1,15 @@
+/* body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
 .loginbox-container{
   /* background-color: black; */
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .loginbox{
   margin: 5%;
