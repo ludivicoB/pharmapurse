@@ -13,8 +13,8 @@ export default function AdminProfile() {
        await axios.put(
         `http://localhost:8080/admin/updateAdmin?adminId=${user.adminId}`,
         {
-          firstname: user.firstName,
-          lastname: user.lastName,
+          firstname: user.firstname,
+          lastname: user.lastname,
           username: user.username,
           email: user.email,
           password: newPassword,
