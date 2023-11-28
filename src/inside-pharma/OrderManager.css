@@ -1,0 +1,42 @@
+.ordermanager-center{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.ordermanager-container{
+    width: 1233px;
+}
+.ordermanager-head{
+    background-color: rgb(227, 227, 227);
+    padding: 10px;
+    /* width: 1233px; */
+    
+}
+.ordermanager-body{
+    /* width: 1233px; */
+    background-color: white;
+    padding: 10px;
+}
+.ordercard{
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+.ordercard-container{
+    /* margin-top: 10px; */
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #EAEAEA;
+}
+.ordercard-body{
+    background-color: white;
+    display: none;
+}
+.productcard{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(255, 132, 132);
+}

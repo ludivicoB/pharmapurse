@@ -26,7 +26,7 @@ export default function PharmaDashboard() {
           </p>
         </div>
         <div className="fbox-container">
-          <Link to="" className="link-nounder">
+          <Link to="/orderManager" className="link-nounder">
             <div className="fbox">
               <img
                 className="cutsup"
