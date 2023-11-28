@@ -3,35 +3,49 @@ import "./MyCart.css";
 import NavBar from "./NavBar";
 import CartItem from "./singlecomponents/CartItem";
 import CheckOut from "./CheckOut";
+import axios from "axios";
+import { useUser } from "../pages/ProviderUser";
 export default function MyCart() {
+  const { user } = useUser();
+  const [orders, setOrders] = useState([]);
+  const [orderString, setOrderString] = useState("");
   const [total, setTotal] = useState(0);
-  useEffect(() => {
-    const calculatedTotal = products
-      .map((product) => product.price * product.quantity)
-      .reduce((a, b) => a + b, 0);
-    setTotal(calculatedTotal);
-  });
 
-  const products = [
-    {
-      name: "PARACETAMOL Biogesic Tablet 500mg 500s",
-      image: "bio.png",
-      price: 30.5,
-      quantity: 2,
-    },
-    {
-      name: "SALONSIPMethyl Salicylate Gel Patch x 2 Patches/Pack",
-      image: "salon.png",
-      price: 91.25,
-      quantity: 1,
-    },
-    {
-      name: "Calcuimide Calcium + Vitamin D + mineral 1 Tablet",
-      image: "cal.png",
-      price: 11.5,
-      quantity: 3,
-    },
-  ];
+  useEffect(() => {
+    const calculatedTotal = orders.map((order) => {
+      return order.total;
+    });
+    setTotal(calculatedTotal.reduce((a, b) => a + b, 0));
+  });
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/order/getAllOrders")
+      .then((res) => {
+        const useOrders = res.data.filter((order) => {
+          if (
+            order.userid === user.userID &&
+            order.deleted === false &&
+            order.ischeckout === false
+          ) {
+            return order;
+          }
+        });
+        setOrders(useOrders);
+        const orderstring = useOrders.map((order) => {
+          return order.orderID;
+        });
+        const actualOrderString = orderstring.join(",");
+        console.log(actualOrderString);
+        setOrderString(actualOrderString);
+
+        console.log("Filtered");
+        console.log(useOrders);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   const updateTotal = (totalp) => {
     setTotal((prevTotal) => prevTotal + totalp);
   };
@@ -48,11 +62,12 @@ export default function MyCart() {
           ></img>
           <div className="mycart-body">
             <div className="mycart-left">
-              {products.map((product, index) => (
+              {orders.map((product, index) => (
                 <CartItem
                   key={index}
                   product={product}
                   updateTotal={updateTotal}
+                  user={user}
                 />
               ))}
             </div>
@@ -67,15 +82,24 @@ export default function MyCart() {
                 src="/images/continuecheckout.png"
                 alt="continuecheckout.png"
                 onClick={() => {
-                  document.getElementById("overlay").style.display = "block";
-                  document.body.classList.add("overlay-active");
+                  if (total === 0) {
+                    alert("Please add items to cart");
+                  } else {
+                    document.getElementById("overlay").style.display = "block";
+                    document.body.classList.add("overlay-active");
+                  }
                 }}
               ></img>
             </div>
           </div>
         </div>
       </div>
-      <CheckOut total={total} />
+      <CheckOut
+        total={total}
+        user={user}
+        orders={orderString}
+        userorders={orders}
+      />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../pages/PharmaLogin.css";
 import axios from "axios";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useUser } from "../pages/ProviderUser";
 export default function PharmaLogin() {
   const { login } = useUser();
@@ -53,7 +53,7 @@ export default function PharmaLogin() {
     if (isLoggedIn) {
       navigate("/pharmaDashboard");
     }
-  },  [isLoggedIn,navigate]);
+  }, [isLoggedIn, navigate]);
   return (
     <>
       <div className="loginbox-container">
@@ -79,7 +79,7 @@ export default function PharmaLogin() {
                 id="password"
               ></input>
               <br />
-              <button className="btnlogin" onClick={handleLogIn}>
+              <button className="pharmalogin-loginbtn" onClick={handleLogIn}>
                 Login
               </button>
               <hr />

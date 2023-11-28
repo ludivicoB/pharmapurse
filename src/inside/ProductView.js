@@ -28,6 +28,7 @@ export default function ProductView() {
           orderDate: formattedDate,
           total: product.price * quantity,
           isDeleted: false,
+          ischeckout: false,
         });
         console.log("Cart added successful:");
         alert("Cart added successful.");
