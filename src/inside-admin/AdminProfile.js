@@ -1,11 +1,30 @@
 import React from "react";
+import axios from "axios";
 import "./AdminProfile.css";
 import AdminNavbar from "./AdminNavbar";
 import { useUser } from "../pages/ProviderUser";
-import { useEffect } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 export default function AdminProfile() {
   const { user, logout } = useUser();
+  const [newPassword, setNewPassword] = useState("");
+  const HandleSave = async () => {
+    try{
+       await axios.put(
+        `http://localhost:8080/admin/updateAdmin?adminId=${user.adminId}`,
+        {
+          firstname: user.firstName,
+          lastname: user.lastName,
+          username: user.username,
+          email: user.email,
+          password: newPassword,
+        }
+      );
+     }
+     catch (error){
+      console.error("There was a problem with the Updated information:", error);
+    }
+  }
   const navigate = useNavigate();
   useEffect(() => {
     console.log(user);
@@ -56,12 +75,13 @@ export default function AdminProfile() {
                   <label className="password">Password: </label>
                   <input
                     className="passwor"
-                    value={user.password}
+                    value={newPassword}
                     type="password"
+                    onChange={(e) => setNewPassword(e.target.value)}
                   ></input>
                   <br></br>
                   <br></br>
-                  <button className="save" type="button">
+                  <button className="save" onClick={HandleSave} type="button">
                     Save
                   </button>
                   <div className="obosave"></div>
