@@ -4,7 +4,6 @@ import PharmaNavbar from "./PharmaNavbar";
 import axios from "axios";
 import { useEffect, useState } from "react";
 export default function OrderManager() {
-  const [fOrder, setFOrder] = useState([]);
   const [productList, setProductList] = useState([]);
   const [orderList, setOrderList] = useState([]);
   const [orders, setOrders] = useState([]);

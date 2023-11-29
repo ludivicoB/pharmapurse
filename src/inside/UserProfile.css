@@ -101,3 +101,12 @@
 .userprofile-savebtn:not(:hover){
     transition: .3s;
 }
+.userprofile-changebtn{
+    position: absolute;
+    cursor: pointer;
+    margin-left: 640px;
+
+    /* right: 0; */
+    /* top: 0; */
+   
+}
