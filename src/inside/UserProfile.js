@@ -37,7 +37,6 @@ export default function UserProfile() {
         }
       );
       alert("Password updated successfully");
-      document.getElementById("userprofile-input-password").value = "";
       window.location.reload();
     } catch (error) {
       console.error("There was a problem with the Updated information:", error);
