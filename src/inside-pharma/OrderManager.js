@@ -166,7 +166,7 @@ export default function OrderManager() {
                           Quantity: {product.quantity}
                         </p>
                         <p className="productcard-title">
-                          Price: {findProductPrice(product.productid)}
+                          Unit Price: {findProductPrice(product.productid)}
                         </p>
                       </div>
                     ))}
