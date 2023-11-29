@@ -7,7 +7,15 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 export default function AdminProfile() {
   const { user, logout } = useUser();
-  const [newPassword, setNewPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("user.password");
+
+  const toggleEditPass = () => {
+    if (document.getElementById("pw").disabled) {
+      document.getElementById("pw").disabled = false;
+    } else {
+      document.getElementById("pw").disabled = true;
+    }
+  };
   const HandleSave = async () => {
     try{
        await axios.put(
@@ -20,6 +28,8 @@ export default function AdminProfile() {
           password: newPassword,
         }
       );
+      alert("Password updated successfully");
+      window.location.reload();
      }
      catch (error){
       console.error("There was a problem with the Updated information:", error);
@@ -54,37 +64,48 @@ export default function AdminProfile() {
                 <h3 className="accountinfo">Account Info</h3>
                 <form className="details">
                   <label className="username">Username: </label>
-                  <input className="usernam" value={user.username}></input>
+                  <input className="usernam" value={user.username}disabled></input>
                   <br></br>
                   <br></br>
                   <label className="name">Firstname: </label>
-                  <input className="nam" value={user.firstname}></input>
+                  <input className="nam" value={user.firstname}disabled></input>
                   <br></br>
                   <button className="logout" onClick={HandleLogout} type="button">
                     Logout
                   </button>
                   <br></br>
                   <label className="email">Lastname: </label>
-                  <input className="emai" value={user.lastname}></input>
+                  <input className="emai" value={user.lastname}disabled></input>
                   <br></br>
                   <br></br>
                   <label className="email">Email: </label>
-                  <input className="emai" value={user.email}></input>
+                  <input className="emai" value={user.email}disabled></input>
                   <br></br>
                   <br></br>
                   <label className="password">Password: </label>
                   <input
                     className="passwor"
+                    id="pw"
                     value={newPassword}
                     type="password"
                     onChange={(e) => setNewPassword(e.target.value)}
+                    disabled
                   ></input>
                   <br></br>
                   <br></br>
                   <button className="save" onClick={HandleSave} type="button">
                     Save
                   </button>
+                  <div className="editable">
+                  <img
+                  className="userprofile-changebtn"
+                  src="/images/passeditbtn.png"
+                  alt="pharmapurse"
+                  onClick={toggleEditPass}
+                ></img>
+                  </div>
                   <div className="obosave"></div>
+                  
                 </form>
               </div>
             </div>
