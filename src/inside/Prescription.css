@@ -1,0 +1,251 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 160rem;
+}.virtual-pillbox-ADf {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #e7efff;
+}
+.virtual-pillbox-ADf .auto-group-ktkh-hjP {
+  box-sizing: border-box;
+  padding: 1.1rem 16.4rem 1rem 19.1rem;
+  width: 100%;
+  height: 9.6rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  background-color: #b9ddff;
+  flex-shrink: 0;
+}
+.virtual-pillbox-ADf .auto-group-ktkh-hjP .group-15105-1EH {
+  margin: 1.863rem 52.9rem 1.565rem 0rem;
+  width: 20.9rem;
+  height: calc(100% - 3.4273rem);
+  position: relative;
+  flex-shrink: 0;
+}
+.virtual-pillbox-ADf .auto-group-ktkh-hjP .group-15105-1EH .ellipse-7-XTX {
+  width: 4.1rem;
+  height: 4.0727rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: contain;
+  vertical-align: top;
+}
+.virtual-pillbox-ADf .auto-group-ktkh-hjP .group-15105-1EH .group-15104-bCV {
+  width: 19.6rem;
+  height: 3.3rem;
+  position: absolute;
+  left: 1.3rem;
+  top: 0.5968rem;
+  display: flex;
+  align-items: center;
+}
+.virtual-pillbox-ADf .auto-group-ktkh-hjP .group-15105-1EH .group-15104-bCV .p-W4Z {
+  margin-right: 2.2rem;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.255;
+  color: #ffffff;
+  font-family: Mulish, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.virtual-pillbox-ADf .auto-group-ktkh-hjP .group-15105-1EH .group-15104-bCV .pharmapurse-dey {
+  margin-bottom: 0.0029rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.255;
+  color: #233248;
+  font-family: Mulish, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.virtual-pillbox-ADf .auto-group-ktkh-hjP .group-15107-A97 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.virtual-pillbox-ADf .auto-group-ktkh-hjP .group-15107-A97 .group-15106-usP {
+  margin: 2.955rem 2.2rem 2.145rem 0rem;
+  height: calc(100% - 5.1007rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.virtual-pillbox-ADf .auto-group-ktkh-hjP .group-15107-A97 .group-15106-usP .home-d2h {
+  margin: 0.099rem 4.7rem 0rem 0rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.255;
+  color: #1f1534;
+  font-family: Mulish, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.virtual-pillbox-ADf .auto-group-ktkh-hjP .group-15107-A97 .group-15106-usP .notifications-wZB {
+  margin: 0.099rem 3.4rem 0rem 0rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.255;
+  color: #1f1534;
+  font-family: Mulish, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.virtual-pillbox-ADf .auto-group-ktkh-hjP .group-15107-A97 .group-15106-usP .mycart-EoB {
+  margin: 0rem 3.5rem 0.099rem 0rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.255;
+  color: #1f1534;
+  font-family: Mulish, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.virtual-pillbox-ADf .auto-group-ktkh-hjP .group-15107-A97 .group-15106-usP .about-us-kFj {
+  margin-bottom: 0.0993rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.255;
+  color: #1f1534;
+  font-family: Mulish, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.virtual-pillbox-ADf .auto-group-ktkh-hjP .group-15107-A97 .accountavatar-g9P {
+  width: 7.5rem;
+  height: 7.5rem;
+  position: relative;
+  background-size: 433.089% 217.717%;
+  background-position: -12.4908rem -4.252rem;
+  background-image: url('../assets/accountavatar-LJM.png');
+  flex-shrink: 0;
+}
+.virtual-pillbox-ADf .auto-group-npxs-92y {
+  box-sizing: border-box;
+  padding: 2.5rem 17.7rem 5rem 17.8rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.virtual-pillbox-ADf .auto-group-npxs-92y .virtual-pillbox-label-fn1 {
+  margin: 0rem 89.869rem 2.905rem 0rem;
+  box-sizing: border-box;
+  padding-top: 0.2653rem;
+  width: calc(100% - 89.8687rem);
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.virtual-pillbox-ADf .auto-group-npxs-92y .virtual-pillbox-label-fn1 .frame-nLq {
+  margin-right: 0.7728rem;
+  width: 6.8594rem;
+  height: 7.0298rem;
+  position: relative;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.virtual-pillbox-ADf .auto-group-npxs-92y .virtual-pillbox-label-fn1 .virtual-pillbox-Gmo {
+  margin-bottom: 0.0099rem;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #000000;
+  font-family: Mulish, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.virtual-pillbox-ADf .auto-group-npxs-92y .auto-group-p7tm-bJH {
+  width: 100%;
+  height: 62.7rem;
+  position: relative;
+  flex-shrink: 0;
+}
+.virtual-pillbox-ADf .auto-group-npxs-92y .auto-group-p7tm-bJH .medicine-header-jvH {
+  box-sizing: border-box;
+  padding: 2.723rem 52.333rem 2.225rem 50.134rem;
+  width: 124.5rem;
+  height: 7.2482rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  background-color: #c4e2ff;
+}
+.virtual-pillbox-ADf .auto-group-npxs-92y .auto-group-p7tm-bJH .medicine-header-jvH .prescriptions-rED {
+  margin-right: 5.2332rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.255;
+  color: #1f1534;
+  font-family: Mulish, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.virtual-pillbox-ADf .auto-group-npxs-92y .auto-group-p7tm-bJH .medicine-header-jvH .pillbox-X5T {
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.255;
+  color: #1f1534;
+  font-family: Mulish, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.virtual-pillbox-ADf .auto-group-npxs-92y .auto-group-p7tm-bJH .rectangle-2097-efs {
+  width: 124.5rem;
+  height: 55.6rem;
+  position: absolute;
+  left: 0;
+  top: 7.1rem;
+  background-color: #ffffff;
+}
+.virtual-pillbox-ADf .auto-group-npxs-92y .auto-group-p7tm-bJH .rectangle-2078-Bvh {
+  width: 33.8rem;
+  height: 53.6rem;
+  position: absolute;
+  left: 45.3rem;
+  top: 8.1rem;
+  object-fit: cover;
+  vertical-align: top;
+}
+.virtual-pillbox-ADf .auto-group-npxs-92y .auto-group-p7tm-bJH .scan-your-prescription-h8M {
+  width: 28.6rem;
+  height: 12.1rem;
+  position: absolute;
+  left: 5.3rem;
+  top: 13.9rem;
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 1.255;
+  color: #1f1534;
+  font-family: Mulish, 'Source Sans Pro';
+}
