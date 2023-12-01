@@ -14,7 +14,7 @@ export default function UserProfile() {
   // });
   const HandleLogout = () => {
     logout();
-    navigate("/user");
+    navigate("/pharmacist");
   };
 
   const toggleEditPass = () => {
