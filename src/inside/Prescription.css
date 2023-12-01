@@ -1,5 +1,5 @@
 
-html {
+/* html {
 	font-size:62.5%;
 }
 * {
@@ -14,7 +14,8 @@ input {
 }
 body {
   width: 160rem;
-}.virtual-pillbox-ADf {
+} */
+.virtual-pillbox-ADf {
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -140,7 +141,7 @@ body {
   position: relative;
   background-size: 433.089% 217.717%;
   background-position: -12.4908rem -4.252rem;
-  background-image: url('../assets/accountavatar-LJM.png');
+  /* background-image: url('../assets/accountavatar-LJM.png'); */
   flex-shrink: 0;
 }
 .virtual-pillbox-ADf .auto-group-npxs-92y {

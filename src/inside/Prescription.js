@@ -3,14 +3,15 @@ import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
 import "./Prescription.css";
 
-export default function ProductCatalog() {
+export default function Prescription() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="container">
-      <header>
+      <NavBar />
+      {/* <header>
         <h1>P PharmaPurse</h1>
         <nav>
           <Link to="/">Home</Link>
@@ -18,7 +19,7 @@ export default function ProductCatalog() {
           <Link to="/my-cart">My Cart</Link>
           <Link to="/about-us">About Us</Link>
         </nav>
-      </header>
+      </header> */}
       <main>
         <h1>Virtual Pillbox</h1>
         <section className="prescriptions">
@@ -54,9 +55,7 @@ export default function ProductCatalog() {
           </div>
         </section>
       </main>
-      <footer>
-        Copyright &copy; 2023 PharmaPurse
-      </footer>
+      <footer>Copyright &copy; 2023 PharmaPurse</footer>
     </div>
   );
 }

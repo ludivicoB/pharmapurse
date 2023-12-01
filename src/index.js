@@ -19,6 +19,7 @@ import Products from "./inside/Products";
 import ProductView from "./inside/ProductView";
 import AboutUs from "./inside/AboutUs";
 import MyCart from "./inside/MyCart";
+import Prescription from "./inside/Prescription";
 // import CheckOut from "./inside/CheckOut";
 import AdminDashboard from "./inside-admin/AdminDashboard";
 import AdminProfile from "./inside-admin/AdminProfile";
@@ -46,7 +47,7 @@ root.render(
           <Route path="/aboutUs" element={<AboutUs />}></Route>
           <Route path="/customerSupport" element={<CustomerSupport />}></Route>
           <Route path="/productCatalog" element={<ProductCatalog />}></Route>
-
+          <Route path="/prescription" element={<Prescription />}></Route>
           <Route path="/products" element={<Products />}></Route>
           <Route path="/productView" element={<ProductView />}></Route>
           <Route path="/userProfile" element={<UserProfile />}></Route>
