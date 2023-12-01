@@ -56,6 +56,15 @@ export default function CustomerMessageInbox() {
       }
     }
   };
+  const findEmail = (id) => {
+    for (let i = 0; i < users.length; i++) {
+      if (users[i].userID === id) {
+        // console.log(users[i].firstname + " " + users[i].lastname);
+        const email = users[i].email;
+        return email;
+      }
+    }
+  };
   const handleReadMessage = (message, index) => {
     axios
       .put(
@@ -163,6 +172,12 @@ export default function CustomerMessageInbox() {
                             Name:{" "}
                             <span className="message-span">
                               {findName(messages.userid)}
+                            </span>
+                          </p>
+                          <p className="messagee">
+                            Email:{" "}
+                            <span className="message-span">
+                              {findEmail(messages.userid)}
                             </span>
                           </p>
                           <p className="messagee">Message:</p>
