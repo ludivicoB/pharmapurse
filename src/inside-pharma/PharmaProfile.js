@@ -1,112 +1,132 @@
-// <<<<<<< HEAD
-// PharmaProfile.js
 import React from "react";
-import axios from "axios";
-import "./PharmaNavbar.css";
 import "./PharmaProfile.css";
 import PharmaNavbar from "./PharmaNavbar";
 import { useUser } from "../pages/ProviderUser";
-import { useEffect,useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
-export default function PharmaProfile() {
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+export default function UserProfile() {
   const { user, logout } = useUser();
-  const [newPassword, setNewPassword] = useState("user.password");
-
+  const [defaultPass, setDefaultPass] = useState(user.password);
+  const navigate = useNavigate();
+  // useEffect(() => {
+  //   console.log(user);
+  // });
+  const HandleLogout = () => {
+    logout();
+    navigate("/user");
+  };
 
   const toggleEditPass = () => {
-    if (document.getElementById("pa").disabled) {
-      document.getElementById("pa").disabled = false;
+    if (document.getElementById("userprofile-input-password").disabled) {
+      document.getElementById("userprofile-input-password").disabled = false;
     } else {
-      document.getElementById("pa").disabled = true;
+      document.getElementById("userprofile-input-password").disabled = true;
     }
   };
-  const HandleSave = async () => {
-    try{
-       await axios.put(
-        `http://localhost:8080/pharmacist/updatePharmacist?pharmacistId=${user.pharmacistId}`,
+  const handleSavePassword = async () => {
+    try {
+      await axios.put(
+        `http://localhost:8080/user/updateUser?userID=${user.userID}`,
         {
           firstname: user.firstname,
           lastname: user.lastname,
           username: user.username,
           email: user.email,
-          password: newPassword,
+          password: document.getElementById("userprofile-input-password").value,
         }
       );
       alert("Password updated successfully");
       window.location.reload();
-     }
-     catch (error){
+    } catch (error) {
       console.error("There was a problem with the Updated information:", error);
     }
-  }
-  const navigate = useNavigate();
-  useEffect(() => {
-    console.log(user);
-  });
-  const HandleLogout = () => {
-    logout();
-    navigate("/pharmacist");
   };
   return (
     <>
       <PharmaNavbar />
-      <div className="pharma-profile-container">
-        <div className="pharma-profile">
-        </div>
-        <div className="anot"></div>
-        <div className="center">
-          <div className="container-div">
-            <div className="namee">
-              <h2 className="pharma-name">{user.firstname} {user.lastname}</h2>
-            </div>
-            <div className="twoo"></div>
+      <div className="center">
+        <div className="userprofile-container">
+          <div className="userprofile-h1-container">
+            <h1 className="userprofile-h1">
+              {user.firstname} {user.lastname}
+            </h1>
+          </div>
+          <div className="userprofile-body">
+            <div className="userprofile-bodyleft">
+              <p className="userprofile-p">Account Information</p>
+              <hr />
+              <div className="userprofile-info">
+                <p className="userprofile-p1">Username: </p>
+                <input
+                  className="userprofile-input"
+                  type="text"
+                  value={user.username}
+                  disabled
+                ></input>
+              </div>
 
-            <div className="info">
-              <h3 className="accountinfo">Account Info</h3>
-              <form className="details">
-                <label className="username">Username: </label>
-                <input className="usernam" value={user.username}disabled />
-                <br></br>
-                <br></br>
-                <label className="name">Firsname: </label>
-                <input className="nam" value={user.firstname}disabled />
-                <br></br>
-                <button className="logout" type="button" onClick={HandleLogout}>
-                  Logout
-                </button>
-                <br></br>
-                <label className="email">Lastname: </label>
-                <input className="emai" value={user.lastname}disabled />
-                <br></br>
-                <br></br>
-                <label className="email">Email: </label>
-                <input className="emai" value={user.email}disabled />
-                <br></br>
-                <br></br>
-                <label className="password">Password: </label>
-                <input 
-                className="passwor"
-                id="pa"
-                value={newPassword}
-                type="password"
-                onChange={(e) => setNewPassword(e.target.value)}
-                disabled 
-                />
-                <br></br>
-                <br></br>
-                <button className="save" type="button"onClick={HandleSave}>
-                  Save
-                </button>
-                <div className="editable">
-                  <img
+              <div className="userprofile-info">
+                <p className="userprofile-p1">Firstname: </p>
+                <input
+                  className="userprofile-input"
+                  type="text"
+                  value={user.firstname}
+                  disabled
+                ></input>
+              </div>
+
+              <div className="userprofile-info">
+                <p className="userprofile-p1">Lastname: </p>
+                <input
+                  className="userprofile-input"
+                  type="text"
+                  value={user.lastname}
+                  disabled
+                ></input>
+              </div>
+
+              <div className="userprofile-info">
+                <p className="userprofile-p1">Email: </p>
+                <input
+                  className="userprofile-input"
+                  type="text"
+                  value={user.email}
+                  disabled
+                ></input>
+              </div>
+
+              <div className="userprofile-info">
+                <p className="userprofile-p1">Password: </p>
+                <input
+                  className="userprofile-input"
+                  id="userprofile-input-password"
+                  type="password"
+                  value={defaultPass}
+                  onChange={(e) => setDefaultPass(e.target.value)}
+                  disabled
+                ></input>
+
+                <img
                   className="userprofile-changebtn"
                   src="/images/passeditbtn.png"
                   alt="pharmapurse"
                   onClick={toggleEditPass}
                 ></img>
-                  </div>
-                <div className="obosave"></div>
-              </form>
+              </div>
+
+              <hr />
+              <button
+                className="userprofile-savebtn"
+                onClick={handleSavePassword}
+              >
+                Save
+              </button>
+            </div>
+            <div className="userprofile-bodyright">
+              <button className="userprofile-logoutbtn" onClick={HandleLogout}>
+                Logout
+              </button>
             </div>
           </div>
         </div>
@@ -114,10 +134,3 @@ export default function PharmaProfile() {
     </>
   );
 }
-// =======
-// import React from "react";
-// import "./PharmaProfile.css";
-// export default function PharmaProfile() {
-//   return <div>PharmaProfile</div>;
-// >>>>>>> 9aa43021751ca0656ae3c3e42b87f2db27292e52
-// }
