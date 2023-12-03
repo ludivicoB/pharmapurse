@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 export default function AdminProfile() {
   const { user, logout } = useUser();
-  const [newPassword, setNewPassword] = useState("user.password");
+  const [newPassword, setNewPassword] = useState(user.password);
 
   const toggleEditPass = () => {
     if (document.getElementById("pw").disabled) {
@@ -17,8 +17,18 @@ export default function AdminProfile() {
     }
   };
   const HandleSave = async () => {
-    try{
-       await axios.put(
+    try {
+      if (newPassword === user.password) {
+        alert("New password cannot be the same as the current password");
+        return;
+      } else if (newPassword === user.username) {
+        alert("New password cannot be the same as the username");
+        return;
+      } else if (newPassword.length < 8) {
+        alert("Password must be at least 8 characters");
+        return;
+      }
+      await axios.put(
         `http://localhost:8080/admin/updateAdmin?adminId=${user.adminId}`,
         {
           firstname: user.firstname,
@@ -30,11 +40,10 @@ export default function AdminProfile() {
       );
       alert("Password updated successfully");
       window.location.reload();
-     }
-     catch (error){
+    } catch (error) {
       console.error("There was a problem with the Updated information:", error);
     }
-  }
+  };
   const navigate = useNavigate();
   useEffect(() => {
     console.log(user);
@@ -46,68 +55,85 @@ export default function AdminProfile() {
   return (
     <>
       <AdminNavbar />
-      <div className="fir">
-        <div className="xax">
-          <div className="adminprofile">
+      <div className="center">
+        <div className="userprofile-container">
+          <div className="userprofile-h1-container">
+            <h1 className="userprofile-h1">
+              {user.firstname} {user.lastname}
+            </h1>
           </div>
-          <div className="anot"></div>
-          <div className="center">
-            <div className="container-div">
-              <div className="namee">
-                <h2 className="johnny">
-                {user.firstname} {user.lastname}
-                   </h2>
+          <div className="userprofile-body">
+            <div className="userprofile-bodyleft">
+              <p className="userprofile-p">Account Information</p>
+              <hr />
+              <div className="userprofile-info">
+                <p className="userprofile-p1">Username: </p>
+                <input
+                  className="userprofile-input"
+                  type="text"
+                  value={user.username}
+                  disabled
+                ></input>
               </div>
-              <div className="twoo"></div>
 
-              <div className="info">
-                <h3 className="accountinfo">Account Info</h3>
-                <form className="details">
-                  <label className="username">Username: </label>
-                  <input className="usernam" value={user.username}disabled></input>
-                  <br></br>
-                  <br></br>
-                  <label className="name">Firstname: </label>
-                  <input className="nam" value={user.firstname}disabled></input>
-                  <br></br>
-                  <button className="logout" onClick={HandleLogout} type="button">
-                    Logout
-                  </button>
-                  <br></br>
-                  <label className="email">Lastname: </label>
-                  <input className="emai" value={user.lastname}disabled></input>
-                  <br></br>
-                  <br></br>
-                  <label className="email">Email: </label>
-                  <input className="emai" value={user.email}disabled></input>
-                  <br></br>
-                  <br></br>
-                  <label className="password">Password: </label>
-                  <input
-                    className="passwor"
-                    id="pw"
-                    value={newPassword}
-                    type="password"
-                    onChange={(e) => setNewPassword(e.target.value)}
-                    disabled
-                  ></input>
-                  <br></br>
-                  <br></br>
-                  <button className="save" onClick={HandleSave} type="button">
-                    Save
-                  </button>
-                  <div className="editable">
-                  <img
+              <div className="userprofile-info">
+                <p className="userprofile-p1">Firstname: </p>
+                <input
+                  className="userprofile-input"
+                  type="text"
+                  value={user.firstname}
+                  disabled
+                ></input>
+              </div>
+
+              <div className="userprofile-info">
+                <p className="userprofile-p1">Lastname: </p>
+                <input
+                  className="userprofile-input"
+                  type="text"
+                  value={user.lastname}
+                  disabled
+                ></input>
+              </div>
+
+              <div className="userprofile-info">
+                <p className="userprofile-p1">Email: </p>
+                <input
+                  className="userprofile-input"
+                  type="text"
+                  value={user.email}
+                  disabled
+                ></input>
+              </div>
+
+              <div className="userprofile-info">
+                <p className="userprofile-p1">Password: </p>
+                <input
+                  className="userprofile-input"
+                  id="pw"
+                  type="password"
+                  value={newPassword}
+                  onChange={(e) => setNewPassword(e.target.value)}
+                  disabled
+                ></input>
+
+                <img
                   className="userprofile-changebtn"
                   src="/images/passeditbtn.png"
                   alt="pharmapurse"
                   onClick={toggleEditPass}
                 ></img>
-                  </div>
-                  <div className="obosave"></div>
-                  
-                </form>
               </div>
+
+              <hr />
+              <button className="userprofile-savebtn" onClick={HandleSave}>
+                Save
+              </button>
+            </div>
+            <div className="userprofile-bodyright">
+              <button className="userprofile-logoutbtn" onClick={HandleLogout}>
+                Logout
+              </button>
             </div>
           </div>
         </div>

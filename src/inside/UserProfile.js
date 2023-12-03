@@ -20,12 +20,36 @@ export default function UserProfile() {
   const toggleEditPass = () => {
     if (document.getElementById("userprofile-input-password").disabled) {
       document.getElementById("userprofile-input-password").disabled = false;
+      document.getElementById(
+        "userprofile-input-password"
+      ).style.backgroundColor = "#e6e6e6";
     } else {
       document.getElementById("userprofile-input-password").disabled = true;
+      document.getElementById(
+        "userprofile-input-password"
+      ).style.backgroundColor = "#D9D9D9";
     }
   };
   const handleSavePassword = async () => {
     try {
+      if (
+        document.getElementById("userprofile-input-password").value ===
+        user.password
+      ) {
+        alert("New password cannot be the same as the current password");
+        return;
+      } else if (
+        document.getElementById("userprofile-input-password").value ===
+        user.username
+      ) {
+        alert("New password cannot be the same as the username");
+        return;
+      } else if (
+        document.getElementById("userprofile-input-password").value.length < 8
+      ) {
+        alert("Password must be at least 8 characters");
+        return;
+      }
       await axios.put(
         `http://localhost:8080/user/updateUser?userID=${user.userID}`,
         {
