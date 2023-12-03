@@ -12,7 +12,7 @@ export default function UserHome() {
   return (
     <>
       <div className="container">
-        <NavBar />
+        <NavBar navActive={"homebtn"} />
         {/* <div className="navbar">
           <div className="navtitle">
             <img src="/images/navtitle.png" alt="pharmapurse"></img>

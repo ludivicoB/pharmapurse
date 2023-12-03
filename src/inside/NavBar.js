@@ -1,8 +1,16 @@
 import React from "react";
 import "./Navbar.css";
-
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-export default function NavBar() {
+export default function NavBar(props) {
+  const [isBold, setIsBold] = useState();
+  useEffect(() => {
+    if (props.navActive === "homebtn") {
+      setIsBold("bold");
+    } else {
+      setIsBold("none");
+    }
+  }, []);
   return (
     <>
       <div className="navbar">
@@ -16,7 +24,9 @@ export default function NavBar() {
 
         <div className="navcontrol">
           <Link to="/home" className="homebtn">
-            <button className="homebtn">Home</button>
+            <button className="homebtn" style={{ fontWeight: isBold }}>
+              Home
+            </button>
           </Link>
           <Link to="/notification" className="homebtn">
             <button className="homebtn">Notification</button>
