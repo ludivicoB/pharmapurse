@@ -58,7 +58,11 @@ export default function UserHome() {
           <div className="fbox-container">
             <Link to="/productCatalog" className="link-nounder">
               <div className="fbox">
-                <img src="/images/prodcat.png" alt="pharmapurse"></img>
+                <img
+                  className="prodcat"
+                  src="/images/prodcat.png"
+                  alt="pharmapurse"
+                ></img>
                 <h2 className="fbox-h2">Product Catalog</h2>
                 <p className="fp">
                   Discover healthier living with our convenient pharmacy
