@@ -65,6 +65,7 @@ export default function CheckOut(props) {
         .catch((err) => {
           console.log(err);
         });
+      window.location.reload();
     }
   };
   return (
