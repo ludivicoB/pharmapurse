@@ -12,8 +12,10 @@ export default function AdminProfile() {
   const toggleEditPass = () => {
     if (document.getElementById("pw").disabled) {
       document.getElementById("pw").disabled = false;
+      document.getElementById("pw").style.backgroundColor = "#e6e6e6";
     } else {
       document.getElementById("pw").disabled = true;
+      document.getElementById("pw").style.backgroundColor = "#D9D9D9";
     }
   };
   const HandleSave = async () => {
