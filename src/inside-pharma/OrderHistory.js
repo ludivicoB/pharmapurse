@@ -1,10 +1,10 @@
 import React from "react";
-import "./OrderManager.css";
+import "./OrderHistory.css";
 import PharmaNavbar from "./PharmaNavbar";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-export default function OrderManager() {
+export default function OrderHistory() {
   const [productList, setProductList] = useState([]);
   const [orderList, setOrderList] = useState([]);
   const [orders, setOrders] = useState([]);
@@ -15,7 +15,7 @@ export default function OrderManager() {
       .then((response) => {
         // console.log(response.data);
         const checkoutorder = response.data.filter(
-          (order) => order.ischeck === false
+          (order) => order.ischeck === true
         );
         // console.log(checkoutorder);
         setOrderList(checkoutorder);
@@ -101,28 +101,7 @@ export default function OrderManager() {
       }
     }
   };
-  function handleReady(cart) {
-    axios
-      .put(
-        `http://localhost:8080/shoppingCart/updateShoppingCart/${cart.cartId}`,
-        {
-          userid: cart.userid,
-          total: cart.total,
-          time: cart.time,
-          date: cart.date,
-          orders: cart.orders,
-          paymethod: cart.paymethod,
-          ischeck: true,
-        }
-      )
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    window.location.reload();
-  }
+
   return (
     <>
       <PharmaNavbar />
@@ -134,7 +113,7 @@ export default function OrderManager() {
           </div>
           <div className="ordermanager-container">
             <div className="ordermanager-head">
-              <Link to="/pharmaDashboard" className="ordermanager-back">
+              <Link to="/orderManager" className="ordermanager-back">
                 <img
                   className="ordermanager-back"
                   src="/images/back.png"
@@ -150,8 +129,7 @@ export default function OrderManager() {
               </Link>
             </div>
             <div className="ordermanager-body">
-              <h1 className="ordermanager-body-title">Pending Order</h1>
-
+              <h1 className="ordermanager-body-title">Order History</h1>
               {orderList.map((order, index) => (
                 <div className="ordercard" key={index}>
                   <div className="ordercard-container">
@@ -209,7 +187,7 @@ export default function OrderManager() {
                     </p>
                     {/* <p className="productcard-title">Orders: {order.orders}</p> */}
                     {findOrderId(order.orders).map((product, index) => (
-                      <div className="productcard" key={index}>
+                      <div className="productcard-h" key={index}>
                         <p className="productcard-title">
                           <b>Product Id: </b>
                           {findProductId(product.productid)}
@@ -228,16 +206,6 @@ export default function OrderManager() {
                         </p>
                       </div>
                     ))}
-                    <div className="ordermanager-btnready-container">
-                      <button
-                        className="ordermanager-btnready"
-                        onClick={() => {
-                          handleReady(order);
-                        }}
-                      >
-                        Done
-                      </button>
-                    </div>
                   </div>
                 </div>
               ))}

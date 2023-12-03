@@ -10,7 +10,7 @@ export default function PharmaDashboard() {
 
   return (
     <div>
-      <PharmaNavbar /> {/* Updated component usage */}
+      <PharmaNavbar navActive={"homebtn"} /> {/* Updated component usage */}
       {/* App Features */}
       <div className="features">
         <div className="featurestext">

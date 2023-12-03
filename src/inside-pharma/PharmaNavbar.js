@@ -3,8 +3,16 @@ import React from "react";
 import "./PharmaNavbar.css";
 import { Link } from "react-router-dom";
 import PharmaProfile from "./PharmaProfile";
-
-export default function PharmaNavbar() {
+import { useEffect, useState } from "react";
+export default function PharmaNavbar(props) {
+  const [isBold, setIsBold] = useState();
+  useEffect(() => {
+    if (props.navActive === "homebtn") {
+      setIsBold("bold");
+    } else {
+      setIsBold("none");
+    }
+  }, []);
   return (
     <>
       <div className="navbar">
@@ -18,7 +26,9 @@ export default function PharmaNavbar() {
 
         <div className="navcontrol">
           <Link to="/pharmaDashboard" className="homebtn">
-            <button className="homebtn">Home</button>
+            <button className="homebtn" style={{ fontWeight: isBold }}>
+              Home
+            </button>
           </Link>
 
           <Link to="/pharmaProfile" className="pharma-profilebtn">

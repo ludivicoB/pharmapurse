@@ -19,6 +19,7 @@ html {
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     /* width: 1233px; */
     
 }
@@ -49,15 +50,19 @@ html {
 .productcard-title{
     margin-left: 10px;
 }
-.productcard{
+.productcard-h{
     display: flex;
     justify-content:space-between;
     padding-left: 30px;
     padding-right: 30px;
     align-items: center;
-    background-color: rgb(122, 199, 254);
+    background-color: rgb(165, 218, 255);
     margin: 10px;
     border-radius: 10px;
+}
+.ordermanager-body-title{
+    text-align: center;
+    padding-bottom: 20px;
 }
 .ordermanager-btnready-container{
     padding: 10px;
