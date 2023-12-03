@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./UserList.css";
 import AdminNavbar from "./AdminNavbar";
 import axios from "axios";
+import Userlistprofile from "./Userlistprofile";
 const UserCustomerList = () => {
   const [customers, setCustomers] = useState([]);
   useEffect(() => {
@@ -19,6 +20,7 @@ const UserCustomerList = () => {
   return (
     <>
       <AdminNavbar />
+      
       <div className="user-list-container">
         <div className="admin-h1-container">
           <h1 className="admin-h1">User/Customer List</h1>
@@ -30,6 +32,11 @@ const UserCustomerList = () => {
                     className="usercard-gear"
                     src="/images/usercardgear.png"
                     alt="pharmapurse"
+                    onClick={() => {
+                    document.getElementById("overlay").style.display = "block";
+                    document.body.classList.add("overlay-active");
+                  
+                }}
                   ></img>
                 </div>
                 <div className="usercard-body">
@@ -47,6 +54,7 @@ const UserCustomerList = () => {
           </div>
         </div>
       </div>
+      <Userlistprofile></Userlistprofile>
     </>
   );
 };
