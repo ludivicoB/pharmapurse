@@ -4,6 +4,7 @@ import AdminNavbar from "./AdminNavbar";
 import axios from "axios";
 import Userlistprofile from "./Userlistprofile";
 const UserCustomerList = () => {
+  const [viewUser, setViewuser] = useState({});
   const [customers, setCustomers] = useState([]);
   useEffect(() => {
     axios
@@ -17,10 +18,14 @@ const UserCustomerList = () => {
         console.error("Error fetching users:", error);
       });
   }, []);
+  function changeUser(user) {
+    console.log(user);
+    setViewuser(user);
+  }
   return (
     <>
       <AdminNavbar />
-      
+
       <div className="user-list-container">
         <div className="admin-h1-container">
           <h1 className="admin-h1">User/Customer List</h1>
@@ -33,10 +38,11 @@ const UserCustomerList = () => {
                     src="/images/usercardgear.png"
                     alt="pharmapurse"
                     onClick={() => {
-                    document.getElementById("overlay").style.display = "block";
-                    document.body.classList.add("overlay-active");
-                  
-                }}
+                      document.getElementById("overlay-user").style.display =
+                        "block";
+                      document.body.classList.add("overlay-active");
+                      changeUser(customer);
+                    }}
                   ></img>
                 </div>
                 <div className="usercard-body">
@@ -53,8 +59,8 @@ const UserCustomerList = () => {
             ))}
           </div>
         </div>
+        <Userlistprofile userInfo={viewUser} />
       </div>
-      <Userlistprofile></Userlistprofile>
     </>
   );
 };

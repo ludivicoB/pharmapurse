@@ -1,20 +1,23 @@
 import React from "react";
 import "./Userlistprofile.css";
-import "../inside/UserProfile.css"
-import { useUser } from "../pages/ProviderUser";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import "../inside/UserProfile.css";
+// import { useUser } from "../pages/ProviderUser";
+import { useState, useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
 import axios from "axios";
-export default function Userlistprofile() {
-  const { user} = useUser();
-  const [defaultPass, setDefaultPass] = useState(user.password);
-  const navigate = useNavigate();
-  // useEffect(() => {
-  //   console.log(user);
-  // });
-  
+export default function Userlistprofile(props) {
+  const [userview, setuserview] = useState({});
+  // const { user } = useUser();
+  const [defaultPass, setDefaultPass] = useState("");
+  // const navigate = useNavigate();
+  useEffect(() => {
+    console.log(props.userInfo);
+    setuserview(props.userInfo);
+    setDefaultPass(props.userInfo.password);
+  }, [props.userInfo]);
 
   const toggleEditPass = () => {
+    // console.log(userview);
     if (document.getElementById("userprofile-input-password").disabled) {
       document.getElementById("userprofile-input-password").disabled = false;
     } else {
@@ -24,12 +27,12 @@ export default function Userlistprofile() {
   const handleSavePassword = async () => {
     try {
       await axios.put(
-        `http://localhost:8080/user/updateUser?userID=${user.userID}`,
+        `http://localhost:8080/user/updateUser?userID=${userview.userID}`,
         {
-          firstname: user.firstname,
-          lastname: user.lastname,
-          username: user.username,
-          email: user.email,
+          firstname: userview.firstname,
+          lastname: userview.lastname,
+          username: userview.username,
+          email: userview.email,
           password: document.getElementById("userprofile-input-password").value,
         }
       );
@@ -41,98 +44,100 @@ export default function Userlistprofile() {
   };
   return (
     <>
-      
       <div className="center">
-      <div className="overlay" id="overlay">
-        <div className="userprofile-container">
-          <div className="userprofile-h1-container">
-          <button
-            className="sirado"
-            onClick={() => {
-              // console.log("disaperar");
-              document.getElementById("overlay").style.display = "none";
-              document.body.classList.remove("overlay-active");
-            }}
-          >
-            X
-          </button>
-            <h1 className="userprofile-h1">
-              {user.firstname} {user.lastname}
-            </h1>
-          </div>
-          <div className="userprofile-body">
-            <div className="userprofile-bodyleft">
-              <p className="userprofile-p">Account Information</p>
-              <hr />
-              <div className="userprofile-info">
-                <p className="userprofile-p1">Username: </p>
-                <input
-                  className="userprofile-input"
-                  type="text"
-                  value={user.username}
-                  disabled
-                ></input>
+        <div className="overlay-user" id="overlay-user">
+          <div className="userpopup-center">
+            <div className="userpopup-container">
+              <div className="userprofile-h1-container">
+                <button
+                  className="sirado"
+                  onClick={() => {
+                    // console.log("disaperar");
+                    document.getElementById("overlay-user").style.display =
+                      "none";
+                    document.body.classList.remove("overlay-active");
+                  }}
+                >
+                  X
+                </button>
+                <h1 className="userprofile-h1">
+                  {userview.firstname} {userview.lastname}
+                </h1>
               </div>
+              <div className="userprofile-body">
+                <div className="userprofile-bodyleft-view">
+                  <p className="userprofile-p">Account Information</p>
+                  <hr />
+                  <div className="userprofile-info-container">
+                    <div className="userprofile-info">
+                      <p className="userprofile-p1">Username: </p>
+                      <input
+                        className="userprofile-input-view"
+                        type="text"
+                        value={userview.username}
+                        disabled
+                      ></input>
+                    </div>
 
-              <div className="userprofile-info">
-                <p className="userprofile-p1">Firstname: </p>
-                <input
-                  className="userprofile-input"
-                  type="text"
-                  value={user.firstname}
-                  disabled
-                ></input>
+                    <div className="userprofile-info">
+                      <p className="userprofile-p1">Firstname: </p>
+                      <input
+                        className="userprofile-input-view"
+                        type="text"
+                        value={userview.firstname}
+                        disabled
+                      ></input>
+                    </div>
+
+                    <div className="userprofile-info">
+                      <p className="userprofile-p1">Lastname: </p>
+                      <input
+                        className="userprofile-input-view"
+                        type="text"
+                        value={userview.lastname}
+                        disabled
+                      ></input>
+                    </div>
+
+                    <div className="userprofile-info">
+                      <p className="userprofile-p1">Email: </p>
+                      <input
+                        className="userprofile-input-view"
+                        type="text"
+                        value={userview.email}
+                        disabled
+                      ></input>
+                    </div>
+
+                    <div className="userprofile-info">
+                      <p className="userprofile-p1">Password: </p>
+                      <input
+                        className="userprofile-input-view"
+                        id="userprofile-input-password"
+                        type="password"
+                        defaultValue={defaultPass}
+                        disabled
+                      ></input>
+                      <img
+                        className="userprofile-changebtn"
+                        src="/images/passeditbtn.png"
+                        alt="pharmapurse"
+                        onClick={toggleEditPass}
+                      ></img>
+                    </div>
+
+                    <hr />
+                  </div>
+                  <button
+                    className="userprofile-savebtn"
+                    onClick={handleSavePassword}
+                  >
+                    Save
+                  </button>
+                </div>
               </div>
-
-              <div className="userprofile-info">
-                <p className="userprofile-p1">Lastname: </p>
-                <input
-                  className="userprofile-input"
-                  type="text"
-                  value={user.lastname}
-                  disabled
-                ></input>
-              </div>
-
-              <div className="userprofile-info">
-                <p className="userprofile-p1">Email: </p>
-                <input
-                  className="userprofile-input"
-                  type="text"
-                  value={user.email}
-                  disabled
-                ></input>
-              </div>
-
-              <div className="userprofile-info">
-                <p className="userprofile-p1">Password: </p>
-                <input
-                  className="userprofile-input"
-                  id="userprofile-input-password"
-                  type="password"
-                  value={defaultPass}
-                  onChange={(e) => setDefaultPass(e.target.value)}
-                  disabled
-                ></input>
-
-                <img
-                  className="userprofile-changebtn"
-                  src="/images/passeditbtn.png"
-                  alt="pharmapurse"
-                  onClick={toggleEditPass}
-                ></img>
-              </div>
-
-              <hr />
-              <button
-                className="userprofile-savebtn"
-                onClick={handleSavePassword}
-              >
-                Save
-              </button>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </>

@@ -3,8 +3,8 @@
   margin-top: 30px;
   display: flex;
   justify-content: center;
-
- /* width: 1233px; */
+  
+  /* width: 1233px; */
 }
 .admin-h1-container{
   -webkit-box-shadow: -3px 5px 15px 5px rgba(0,0,0,0.31); 
@@ -24,7 +24,7 @@
   /* height: 500px; */
   display: flex;
   justify-content: center;
-
+  flex-wrap: wrap;
 }
 .usercard-container{
   margin: 10px;
