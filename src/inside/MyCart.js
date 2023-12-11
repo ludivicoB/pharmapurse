@@ -49,7 +49,9 @@ export default function MyCart() {
   const updateTotal = (totalp) => {
     setTotal((prevTotal) => prevTotal + totalp);
   };
-
+  const callReload = () => {
+    window.location.reload();
+  };
   return (
     <>
       <NavBar />
@@ -99,6 +101,7 @@ export default function MyCart() {
         user={user}
         orders={orderString}
         userorders={orders}
+        callReload={callReload}
       />
     </>
   );

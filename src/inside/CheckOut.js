@@ -66,6 +66,9 @@ export default function CheckOut(props) {
           console.log(err);
         });
     }
+    setTimeout(() => {
+      props.callReload();
+    }, 2000);
   };
   return (
     <>

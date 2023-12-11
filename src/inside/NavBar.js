@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Notification from "./Notification";
+
 export default function NavBar(props) {
-  const [isBold, setIsBold] = useState();
+  const [isBold, setIsBold] = useState("none");
+  const [notificationVisible, setNotificationVisible] = useState(false);
+
   useEffect(() => {
     if (props.navActive === "homebtn") {
       setIsBold("bold");
     } else {
       setIsBold("none");
     }
-  }, []);
+  }, [props.navActive]);
+
+  const toggleNotification = () => {
+    if (notificationVisible) {
+      setNotificationVisible(false);
+    } else {
+      setNotificationVisible(true);
+    }
+  };
+
   return (
     <>
       <div className="navbar">
@@ -19,7 +31,7 @@ export default function NavBar(props) {
             className="navimg"
             src="/images/navtitle.png"
             alt="pharmapurse"
-          ></img>
+          />
         </div>
 
         <div className="navcontrol">
@@ -28,9 +40,9 @@ export default function NavBar(props) {
               Home
             </button>
           </Link>
-          <Link to="/notification" className="homebtn">
-            <button className="homebtn">Notification</button>
-          </Link>
+          <button className="homebtn" onClick={toggleNotification}>
+            Notification
+          </button>
           <Link to="/myCart" className="homebtn">
             <button className="homebtn">MyCart</button>
           </Link>
@@ -42,8 +54,11 @@ export default function NavBar(props) {
               className="accimg"
               src="/images/account.png"
               alt="pharmapurse"
-            ></img>
+            />
           </Link>
+          {notificationVisible && (
+            <Notification setNotificationVisible={setNotificationVisible} />
+          )}
         </div>
       </div>
     </>

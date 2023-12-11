@@ -52,7 +52,7 @@ root.render(
           <Route path="/products" element={<Products />}></Route>
           <Route path="/productView" element={<ProductView />}></Route>
           <Route path="/userProfile" element={<UserProfile />}></Route>
-          <Route path="/notification" element={<Notification />}></Route>
+          {/* <Route path="/notification" element={<Notification />}></Route> */}
 
           <Route path="/myCart" element={<MyCart />}></Route>
           {/* <Route path="/checkOut" element={<CheckOut />}></Route> */}

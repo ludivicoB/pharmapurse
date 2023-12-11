@@ -102,6 +102,26 @@ export default function OrderManager() {
     }
   };
   function handleReady(cart) {
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.getFullYear()}-${(
+      currentDate.getMonth() + 1
+    )
+      .toString()
+      .padStart(2, "0")}-${currentDate.getDate().toString().padStart(2, "0")}`;
+    axios
+      .post(`http://localhost:8080/notification/insertNotification`, {
+        userid: cart.userid,
+        subject: "Order Accepted",
+        message: `Your order has been accepted, and ready for pickup and payment at ${cart.time} on ${cart.date}`,
+        isread: false,
+        date: formattedDate,
+      })
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     axios
       .put(
         `http://localhost:8080/shoppingCart/updateShoppingCart/${cart.cartId}`,
