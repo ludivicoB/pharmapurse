@@ -1,6 +1,6 @@
 
 .aboutsection{
-    margin-top: 80px;
+    margin-top: 50px;
     background-color: #C4E3FF;
     text-align: center;
     padding-bottom: 20px;
@@ -31,4 +31,7 @@
      margin-top: 20px; 
     display: flex;
     justify-content: center;
+}
+.devname-container{
+    margin-bottom: 20px;
 }
