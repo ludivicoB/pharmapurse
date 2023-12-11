@@ -64,14 +64,20 @@ export default function MyCart() {
           ></img>
           <div className="mycart-body">
             <div className="mycart-left">
-              {orders.map((product, index) => (
-                <CartItem
-                  key={index}
-                  product={product}
-                  updateTotal={updateTotal}
-                  user={user}
-                />
-              ))}
+              {total === 0 ? (
+                <div className="mycart-empty">
+                  <h1>Cart is empty :(</h1>
+                </div>
+              ) : (
+                orders.map((product, index) => (
+                  <CartItem
+                    key={index}
+                    product={product}
+                    updateTotal={updateTotal}
+                    user={user}
+                  />
+                ))
+              )}
             </div>
             <div className="mycart-right">
               <p className="processorder-p">Process Order</p>

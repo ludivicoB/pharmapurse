@@ -7,6 +7,17 @@
 .mycart-title{
     padding-bottom: 20px;
 }
+.mycart-empty{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.mycart-empty > h1{
+    font-size: 80px;
+    color: rgba(0, 0, 0, 0.244);
+}
 .mycart-body{
     width: 1233px;
     display: flex;
