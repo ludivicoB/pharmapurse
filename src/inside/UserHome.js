@@ -87,7 +87,7 @@ export default function UserHome() {
               </div>
             </Link>
 
-            <Link className="link-nounder">
+            {/* <Link className="link-nounder">
               <div className="fbox">
                 <img
                   className="vpill"
@@ -100,7 +100,7 @@ export default function UserHome() {
                   Virtual Pillbox
                 </p>
               </div>
-            </Link>
+            </Link> */}
           </div>
         </div>
 

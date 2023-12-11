@@ -36,11 +36,11 @@ export default function Products() {
                   alt="pic"
                 ></img>
               </Link>
-              <input
+              {/* <input
                 className="product-searchbar"
                 type="text"
                 placeholder="Search"
-              ></input>
+              ></input> */}
             </div>
             <div className="products-container">
               {products.map((product, index) => (
