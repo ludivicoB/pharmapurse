@@ -17,9 +17,9 @@ export default function AdminNavbar() {
           <Link to="/adminDashboard" className="admin-homebtn">
             <button className="admin-homebtn">Home</button>
           </Link>
-          <Link className="admin-homebtn">
+          {/* <Link className="admin-homebtn">
             <button className="admin-homebtn">Notification</button>
-          </Link>
+          </Link> */}
           <p className="admin-p">Admin</p>
           <Link to="/adminProfile" className="admin-profilebtn">
             <img
