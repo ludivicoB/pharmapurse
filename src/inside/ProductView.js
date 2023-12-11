@@ -44,7 +44,9 @@ export default function ProductView() {
   };
   useEffect(() => {
     if (isAdded) {
-      navigate("/products");
+      setTimeout(() => {
+        navigate("/products");
+      }, 2000);
     }
   }, [isAdded]);
   return (
