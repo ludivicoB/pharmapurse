@@ -30,7 +30,6 @@ export default function ProductView() {
           isDeleted: false,
           ischeckout: false,
         });
-        console.log("Cart added successful:");
         alert("Cart added successful.");
         setIsAdded(true);
       } catch (error) {
