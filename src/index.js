@@ -16,6 +16,8 @@ import UserProfile from "./inside/UserProfile";
 import CustomerSupport from "./inside/CustomerSupport";
 import ProductCatalog from "./inside/ProductCatalog";
 import Products from "./inside/Products";
+import ProductsHygiene from "./inside/ProductsHygiene";
+import ProductsWellness from "./inside/ProductsWellnes";
 import ProductView from "./inside/ProductView";
 import AboutUs from "./inside/AboutUs";
 import MyCart from "./inside/MyCart";
@@ -50,6 +52,11 @@ root.render(
           <Route path="/productCatalog" element={<ProductCatalog />}></Route>
           <Route path="/prescription" element={<Prescription />}></Route>
           <Route path="/products" element={<Products />}></Route>
+          <Route path="/productsHygiene" element={<ProductsHygiene />}></Route>
+          <Route
+            path="/productsWellness"
+            element={<ProductsWellness />}
+          ></Route>
           <Route path="/productView" element={<ProductView />}></Route>
           <Route path="/userProfile" element={<UserProfile />}></Route>
           {/* <Route path="/notification" element={<Notification />}></Route> */}

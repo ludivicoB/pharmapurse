@@ -4,7 +4,7 @@ import "./Products.css";
 import NavBar from "./NavBar";
 import ProductCard from "./singlecomponents/ProductCard";
 import { Link } from "react-router-dom";
-export default function Products() {
+export default function ProductsHygiene() {
   const [products, setProduct] = useState([]);
   useEffect(() => {
     axios
@@ -12,7 +12,7 @@ export default function Products() {
       .then((response) => {
         // setUsers(response.data.filter(user => user.userid === 6));
         const filtered = response.data.filter(
-          (item) => item.category === "medicine"
+          (item) => item.category === "hygiene"
         );
         setProduct(filtered);
         console.log("response", response.data);
@@ -35,7 +35,7 @@ export default function Products() {
               <Link to="/productCatalog">
                 <img
                   className="product-backbtn"
-                  src="/images/mediback.png"
+                  src="/images/hygback.png"
                   alt="pic"
                 ></img>
               </Link>

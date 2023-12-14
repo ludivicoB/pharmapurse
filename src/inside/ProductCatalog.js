@@ -29,20 +29,30 @@ export default function ProductCatalog() {
                   <p className="productcatalog-p">Medication</p>
                 </div>
               </Link>
-              <div className="category">
+              {/* <div className="category">
                 <img src="/images/category2.png"></img>
                 <p className="productcatalog-p">Prescripted Medicine</p>
-              </div>
-
-              <div className="category">
-                <img src="/images/category3.png"></img>
-                <p className="productcatalog-p">Personal Care</p>
-              </div>
-
-              <div className="category">
-                <img className="thermo" src="/images/category4.png"></img>
-                <p className="productcatalog-p">Health and Wellness Products</p>
-              </div>
+              </div> */}
+              <Link
+                to="/productsHygiene"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <div className="category">
+                  <img src="/images/category3.png"></img>
+                  <p className="productcatalog-p">Personal Care</p>
+                </div>
+              </Link>
+              <Link
+                to="/productsWellness"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <div className="category">
+                  <img className="thermo" src="/images/category4.png"></img>
+                  <p className="productcatalog-p">
+                    Health and Wellness Products
+                  </p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

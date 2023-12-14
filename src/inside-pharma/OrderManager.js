@@ -141,7 +141,9 @@ export default function OrderManager() {
       .catch((error) => {
         console.log(error);
       });
-    window.location.reload();
+    setTimeout(() => {
+      window.location.reload();
+    }, 1500);
   }
   return (
     <>

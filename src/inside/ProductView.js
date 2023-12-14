@@ -37,18 +37,15 @@ export default function ProductView() {
         console.error("Error adding to cart:", error);
         // Handle error (e.g., show an error message to the user)
       }
+      setTimeout(() => {
+        navigate("/productCatalog");
+      }, 2000);
     } else {
       alert("Quantity must be greater than 0.");
       return;
     }
   };
-  useEffect(() => {
-    if (isAdded) {
-      setTimeout(() => {
-        navigate("/products");
-      }, 2000);
-    }
-  }, [isAdded]);
+
   return (
     <>
       <NavBar />
@@ -59,7 +56,7 @@ export default function ProductView() {
           </div>
           <div className="featurebox">
             <div className="product-featureHead">
-              <Link to="/products">
+              <Link to="/productCatalog">
                 <img
                   className="product-backbtn"
                   src="/images/back.png"
