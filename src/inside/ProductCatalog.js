@@ -11,7 +11,7 @@ export default function ProductCatalog() {
   useEffect(() => {
     window.scrollTo(0, 0);
     if (user === null) {
-      navigate("/admin");
+      navigate("/user");
     }
   });
   return (
