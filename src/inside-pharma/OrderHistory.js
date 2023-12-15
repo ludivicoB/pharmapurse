@@ -4,12 +4,19 @@ import PharmaNavbar from "./PharmaNavbar";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useUser } from "../pages/ProviderUser";
 export default function OrderHistory() {
   const [productList, setProductList] = useState([]);
   const [orderList, setOrderList] = useState([]);
   const [orders, setOrders] = useState([]);
   const [userList, setUserList] = useState([]);
+  const navigate = useNavigate();
+  const { user } = useUser();
   useEffect(() => {
+    if (user === null) {
+      navigate("/pharmacist");
+    }
     axios
       .get("http://localhost:8080/shoppingCart/getAllShoppingCarts")
       .then((response) => {

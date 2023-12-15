@@ -2,10 +2,17 @@ import React, { useEffect } from "react";
 import "./PharmaDashboard.css";
 import PharmaNavbar from "./PharmaNavbar"; // Updated import statement
 import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
+import { useUser } from "../pages/ProviderUser";
 export default function PharmaDashboard() {
+  const navigate = useNavigate();
+  const { user } = useUser();
+
   useEffect(() => {
     document.body.style.backgroundColor = "#E7EFFF";
+    if (user === null) {
+      navigate("/pharmacist");
+    }
   }, []);
 
   return (
