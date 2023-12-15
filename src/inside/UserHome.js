@@ -4,14 +4,19 @@ import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useUser } from "../pages/ProviderUser";
+import { useNavigate } from "react-router-dom";
 export default function UserHome() {
-  // const { user } = useUser();
+  const navigate = useNavigate();
+  const { user } = useUser();
   useEffect(() => {
     window.scrollTo(0, 0);
     window.history.pushState(null, document.title, window.location.href);
     window.addEventListener("popstate", function (event) {
       window.history.pushState(null, document.title, window.location.href);
     });
+    if (user === null) {
+      navigate("/user");
+    }
   });
   return (
     <>

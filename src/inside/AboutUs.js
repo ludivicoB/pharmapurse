@@ -1,7 +1,18 @@
 import React from "react";
 import "./AboutUs.css";
 import NavBar from "./NavBar";
+import { useUser } from "../pages/ProviderUser";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 export default function AboutUs() {
+  const { user } = useUser();
+  const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    if (user === null) {
+      navigate("/user");
+    }
+  }, []);
   return (
     <>
       <NavBar />

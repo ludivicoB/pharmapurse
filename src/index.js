@@ -50,7 +50,7 @@ root.render(
           <Route path="/aboutUs" element={<AboutUs />}></Route>
           <Route path="/customerSupport" element={<CustomerSupport />}></Route>
           <Route path="/productCatalog" element={<ProductCatalog />}></Route>
-          <Route path="/prescription" element={<Prescription />}></Route>
+          {/* <Route path="/prescription" element={<Prescription />}></Route> */}
           <Route path="/products" element={<Products />}></Route>
           <Route path="/productsHygiene" element={<ProductsHygiene />}></Route>
           <Route

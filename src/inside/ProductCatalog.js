@@ -3,9 +3,16 @@ import NavBar from "./NavBar";
 import "./ProductCatalog.css";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useUser } from "../pages/ProviderUser";
+import { useNavigate } from "react-router-dom";
 export default function ProductCatalog() {
+  const navigate = useNavigate();
+  const { user } = useUser();
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (user === null) {
+      navigate("/admin");
+    }
   });
   return (
     <>

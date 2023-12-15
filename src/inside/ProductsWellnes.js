@@ -4,9 +4,16 @@ import "./Products.css";
 import NavBar from "./NavBar";
 import ProductCard from "./singlecomponents/ProductCard";
 import { Link } from "react-router-dom";
+import { useUser } from "../pages/ProviderUser";
+import { useNavigate } from "react-router-dom";
 export default function ProductsWellness() {
   const [products, setProduct] = useState([]);
+  const navigate = useNavigate();
+  const { user } = useUser();
   useEffect(() => {
+    if (user === null) {
+      navigate("/user");
+    }
     axios
       .get("http://localhost:8080/product/getAllProduct")
       .then((response) => {

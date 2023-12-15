@@ -5,7 +5,9 @@ import CartItem from "./singlecomponents/CartItem";
 import CheckOut from "./CheckOut";
 import axios from "axios";
 import { useUser } from "../pages/ProviderUser";
+import { useNavigate } from "react-router-dom";
 export default function MyCart() {
+  const navigate = useNavigate();
   const { user } = useUser();
   const [orders, setOrders] = useState([]);
   const [orderString, setOrderString] = useState("");
@@ -18,6 +20,9 @@ export default function MyCart() {
     setTotal(calculatedTotal.reduce((a, b) => a + b, 0));
   });
   useEffect(() => {
+    if (user === null) {
+      navigate("/user");
+    }
     axios
       .get("http://localhost:8080/order/getAllOrders")
       .then((res) => {

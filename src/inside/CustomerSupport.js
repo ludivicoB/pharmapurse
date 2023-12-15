@@ -5,11 +5,16 @@ import { useEffect } from "react";
 import { useUser } from "../pages/ProviderUser";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 export default function CustomerSupport() {
   const { user } = useUser();
+  const navigate = useNavigate();
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+    if (user === null) {
+      navigate("/user");
+    }
+  }, []);
   const HandleMessageClick = async () => {
     const currentDate = new Date();
     const formattedDate = `${currentDate.getFullYear()}-${(

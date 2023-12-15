@@ -3,10 +3,18 @@ import "./UserList.css";
 import AdminNavbar from "./AdminNavbar";
 import axios from "axios";
 import Userlistprofile from "./Userlistprofile";
+import { useNavigate } from "react-router-dom";
+import { useUser } from "../pages/ProviderUser";
 const UserCustomerList = () => {
   const [viewUser, setViewuser] = useState({});
   const [customers, setCustomers] = useState([]);
+  const { user } = useUser();
+  const navigate = useNavigate();
   useEffect(() => {
+    console.log(localStorage.getItem("user"));
+    if (user === null) {
+      navigate("/admin");
+    }
     axios
       .get("http://localhost:8080/user/getAllUser")
       .then((response) => {
