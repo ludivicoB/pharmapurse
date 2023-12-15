@@ -2,9 +2,15 @@ import React, { useEffect } from "react";
 import "../pages/UserRegister.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
-
+import { useUser } from "../pages/ProviderUser";
+import { useNavigate } from "react-router-dom";
 export default function UserRegister() {
+  const { user } = useUser();
+  const navigate = useNavigate();
   useEffect(() => {
+    if (user) {
+      navigate("/home");
+    }
     document.body.style.backgroundColor = "#E7EFFF";
     // console.log(postData);
   }, []);

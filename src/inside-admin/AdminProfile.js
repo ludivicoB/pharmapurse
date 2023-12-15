@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 export default function AdminProfile() {
   const { user, logout } = useUser();
-  const [newPassword, setNewPassword] = useState(user.password);
+  const [newPassword, setNewPassword] = useState();
 
   const toggleEditPass = () => {
     if (document.getElementById("pw").disabled) {
@@ -49,6 +49,12 @@ export default function AdminProfile() {
   const navigate = useNavigate();
   useEffect(() => {
     console.log(user);
+    if (!user) {
+      navigate("/admin");
+    }
+    if (user) {
+      setNewPassword(user.password);
+    }
   });
   const HandleLogout = () => {
     logout();
@@ -58,87 +64,97 @@ export default function AdminProfile() {
     <>
       <AdminNavbar />
       <div className="center">
-        <div className="userprofile-container">
-          <div className="userprofile-h1-container">
-            <h1 className="userprofile-h1">
-              {user.firstname} {user.lastname}
-            </h1>
-          </div>
-          <div className="userprofile-body">
-            <div className="userprofile-bodyleft">
-              <p className="userprofile-p">Account Information</p>
-              <hr />
-              <div className="userprofile-info">
-                <p className="userprofile-p1">Username: </p>
-                <input
-                  className="userprofile-input"
-                  type="text"
-                  value={user.username}
-                  disabled
-                ></input>
-              </div>
-
-              <div className="userprofile-info">
-                <p className="userprofile-p1">Firstname: </p>
-                <input
-                  className="userprofile-input"
-                  type="text"
-                  value={user.firstname}
-                  disabled
-                ></input>
-              </div>
-
-              <div className="userprofile-info">
-                <p className="userprofile-p1">Lastname: </p>
-                <input
-                  className="userprofile-input"
-                  type="text"
-                  value={user.lastname}
-                  disabled
-                ></input>
-              </div>
-
-              <div className="userprofile-info">
-                <p className="userprofile-p1">Email: </p>
-                <input
-                  className="userprofile-input"
-                  type="text"
-                  value={user.email}
-                  disabled
-                ></input>
-              </div>
-
-              <div className="userprofile-info">
-                <p className="userprofile-p1">Password: </p>
-                <input
-                  className="userprofile-input"
-                  id="pw"
-                  type="password"
-                  value={newPassword}
-                  onChange={(e) => setNewPassword(e.target.value)}
-                  disabled
-                ></input>
-
-                <img
-                  className="userprofile-changebtn"
-                  src="/images/passeditbtn.png"
-                  alt="pharmapurse"
-                  onClick={toggleEditPass}
-                ></img>
-              </div>
-
-              <hr />
-              <button className="userprofile-savebtn" onClick={HandleSave}>
-                Save
-              </button>
+        {user &&
+        user.firstname !== null &&
+        user.lastname !== null &&
+        user.username !== null ? (
+          <div className="userprofile-container">
+            <div className="userprofile-h1-container">
+              <h1 className="userprofile-h1">
+                {user.firstname} {user.lastname}
+              </h1>
             </div>
-            <div className="userprofile-bodyright">
-              <button className="userprofile-logoutbtn" onClick={HandleLogout}>
-                Logout
-              </button>
+            <div className="userprofile-body">
+              <div className="userprofile-bodyleft">
+                <p className="userprofile-p">Account Information</p>
+                <hr />
+                <div className="userprofile-info">
+                  <p className="userprofile-p1">Username: </p>
+                  <input
+                    className="userprofile-input"
+                    type="text"
+                    value={user.username}
+                    disabled
+                  ></input>
+                </div>
+
+                <div className="userprofile-info">
+                  <p className="userprofile-p1">Firstname: </p>
+                  <input
+                    className="userprofile-input"
+                    type="text"
+                    value={user.firstname}
+                    disabled
+                  ></input>
+                </div>
+
+                <div className="userprofile-info">
+                  <p className="userprofile-p1">Lastname: </p>
+                  <input
+                    className="userprofile-input"
+                    type="text"
+                    value={user.lastname}
+                    disabled
+                  ></input>
+                </div>
+
+                <div className="userprofile-info">
+                  <p className="userprofile-p1">Email: </p>
+                  <input
+                    className="userprofile-input"
+                    type="text"
+                    value={user.email}
+                    disabled
+                  ></input>
+                </div>
+
+                <div className="userprofile-info">
+                  <p className="userprofile-p1">Password: </p>
+                  <input
+                    className="userprofile-input"
+                    id="pw"
+                    type="password"
+                    value={newPassword}
+                    onChange={(e) => setNewPassword(e.target.value)}
+                    disabled
+                  ></input>
+
+                  <img
+                    className="userprofile-changebtn"
+                    src="/images/passeditbtn.png"
+                    alt="pharmapurse"
+                    onClick={toggleEditPass}
+                  ></img>
+                </div>
+
+                <hr />
+                <button className="userprofile-savebtn" onClick={HandleSave}>
+                  Save
+                </button>
+              </div>
+              <div className="userprofile-bodyright">
+                <button
+                  className="userprofile-logoutbtn"
+                  onClick={HandleLogout}
+                >
+                  Logout
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
     </>
   );

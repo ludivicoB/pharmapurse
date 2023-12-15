@@ -4,7 +4,7 @@ import "../pages/UserLogin.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useUser } from "../pages/ProviderUser";
 export default function UserLogin() {
-  const { login } = useUser();
+  const { login, user } = useUser();
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -50,6 +50,9 @@ export default function UserLogin() {
     }
   };
   useEffect(() => {
+    if (user) {
+      navigate("/home");
+    }
     // Check if registration is successful
     if (isLoggedIn) {
       // Redirect or show a success message as needed

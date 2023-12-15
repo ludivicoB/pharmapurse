@@ -4,7 +4,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useUser } from "../pages/ProviderUser";
 export default function PharmaLogin() {
-  const { login } = useUser();
+  const { login, user } = useUser();
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const handleLogIn = async () => {
@@ -50,6 +50,9 @@ export default function PharmaLogin() {
   };
   useEffect(() => {
     // Check if registration is successful
+    if (user) {
+      navigate("/pharmaDashboard");
+    }
     if (isLoggedIn) {
       navigate("/pharmaDashboard");
     }

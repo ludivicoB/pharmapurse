@@ -3,9 +3,17 @@ import "./AdminDashboard.css";
 import "../inside-admin/AdminDashboard.css";
 import { Link } from "react-router-dom";
 import AdminNavbar from "./AdminNavbar";
+import { useUser } from "../pages/ProviderUser";
+import { useNavigate } from "react-router-dom";
+
 export default function AdminDashboard() {
+  const { user } = useUser();
+  const navigate = useNavigate();
   useEffect(() => {
     document.body.style.backgroundColor = "#E7EFFF";
+    if (!user) {
+      navigate("/admin");
+    }
   }, []);
   return (
     <>
