@@ -55,6 +55,10 @@ export default function UserLogin() {
       // Redirect or show a success message as needed
       navigate("/home");
     }
+    window.history.pushState(null, document.title, window.location.href);
+    window.addEventListener("popstate", function (event) {
+      window.history.pushState(null, document.title, window.location.href);
+    });
   }, [isLoggedIn]);
   return (
     <>

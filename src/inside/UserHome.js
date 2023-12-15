@@ -8,6 +8,10 @@ export default function UserHome() {
   // const { user } = useUser();
   useEffect(() => {
     window.scrollTo(0, 0);
+    window.history.pushState(null, document.title, window.location.href);
+    window.addEventListener("popstate", function (event) {
+      window.history.pushState(null, document.title, window.location.href);
+    });
   });
   return (
     <>
